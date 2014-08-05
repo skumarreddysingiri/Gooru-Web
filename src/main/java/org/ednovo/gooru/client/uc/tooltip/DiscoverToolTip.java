@@ -280,7 +280,11 @@ public class DiscoverToolTip extends PopupPanel implements HasMouseOutHandlers{
 				@Override
 				public void onClick(ClickEvent event) {
 					setHeaderBrowserTitle(partnerTitle.getText());
-					AppClientFactory.getPlaceManager().revealPlace(libraryUserDo.getUsername());
+					String partnerName = libraryUserDo.getUsername();
+					if(partnerName.equalsIgnoreCase("CFCI")) {
+						partnerName = PlaceTokens.FINCAPINC;
+					}
+					AppClientFactory.getPlaceManager().revealPlace(partnerName);
 				}
 			});
 			partnerLibContainer.add(partnerTitle);
