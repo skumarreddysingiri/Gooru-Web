@@ -19,7 +19,7 @@ a, a:visited, a:active {
 
 a:hover {
 	text-decoration:none !important;
-	opacity:.6;
+/* 	opacity:.6; */
 	cursor:pointer;
 }
 

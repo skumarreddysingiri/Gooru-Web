@@ -28,7 +28,7 @@
 	text-align: left;
 	float: left;
 	text-decoration: none !important;
-	padding: 9px 5px 8px 32px;
+	padding: 9px 5px 8px 32px !important;
 	color: #515151;
 	font-size: 12px;
 	cursor: pointer;

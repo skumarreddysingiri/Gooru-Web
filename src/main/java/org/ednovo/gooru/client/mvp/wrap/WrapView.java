@@ -121,7 +121,7 @@ public class WrapView extends BaseView implements IsWrapView {
 		  {
 			  ipadSectiondiv.setVisible(false);
 			  androidSectiondiv.setVisible(false);
-			  wrapperPanel.getElement().setAttribute("style", "margin-top:36px;");
+		//	  wrapperPanel.getElement().setAttribute("style", "margin-top:36px;");
 			  headerUc.getElement().getFirstChildElement().setAttribute("style", "position:fixed;");
 			 // wrapperPanel.getElement().getFirstChildElement().getFirstChildElement().setAttribute("style", "position:fixed;");
 		  }

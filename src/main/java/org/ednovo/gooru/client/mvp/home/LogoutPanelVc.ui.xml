@@ -1,16 +1,29 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
-	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:uc="urn:import:org.ednovo.gooru.client.uc">
 	<ui:with type="org.ednovo.gooru.client.mvp.home.HomeCBundle"
 		field="res" />
-	<g:FlowPanel ui:field="logPanel" styleName="{res.css.logPanel}">
-		<g:Anchor styleName="{res.css.logoutText}" ui:field="anrSettings"></g:Anchor>
-		<g:Anchor styleName="{res.css.logoutText}" ui:field="classicGooruAnr"></g:Anchor>
-		<g:HTMLPanel styleName="{res.css.userMenuBottomLine}" />
-		<g:Anchor styleName="{res.css.logoutText}" ui:field="supportAnr" target="_blank"></g:Anchor>
-		<g:Anchor styleName="{res.css.logoutText}" ui:field="feedbackAnr"></g:Anchor>
+	<g:FlowPanel ui:field="logPanel">
+	    <uc:UlPanel  styleName="dropdown-menu {res.css.dropdowDisplay}">
+	        <uc:LiPanel>
+	    		<g:Anchor styleName="{res.css.logoutText}" ui:field="anrSettings"></g:Anchor>        
+	        </uc:LiPanel>
+	        <uc:LiPanel>
+				<g:Anchor styleName="{res.css.logoutText}" ui:field="classicGooruAnr"></g:Anchor>            
+	       		<g:HTMLPanel styleName="{res.css.userMenuBottomLine}" />
+			</uc:LiPanel>
+	        <uc:LiPanel>
+					<g:Anchor styleName="{res.css.logoutText}" ui:field="supportAnr" target="_blank"></g:Anchor>            
+	        </uc:LiPanel>
+	        <uc:LiPanel>
+	    			<g:Anchor styleName="{res.css.logoutText}" ui:field="feedbackAnr"></g:Anchor>        
+	       			<g:HTMLPanel styleName="{res.css.userMenuBottomLine}"/>
+	    	</uc:LiPanel>
+	        <uc:LiPanel>
+	            <g:Anchor styleName="{res.css.logoutText}" ui:field="logoutAnr"></g:Anchor>
+	        </uc:LiPanel>
+	    </uc:UlPanel>
 		<!-- <g:Anchor styleName="{res.css.logoutText}" ui:field="gooruAnr"></g:Anchor> -->
-		<g:HTMLPanel styleName="{res.css.userMenuBottomLine}"/>
-		<g:Anchor styleName="{res.css.logoutText}" ui:field="logoutAnr"></g:Anchor>
+		
 	</g:FlowPanel>
 </ui:UiBinder> 

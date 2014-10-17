@@ -1,10 +1,10 @@
 @charset "utf-8";
 /* CSS Document */
-html{
+/* html{
 	width:760px;
 	overflow:auto !important;
 }
-
+ */
 .container{
 	width:960px;
  	margin-left: auto;

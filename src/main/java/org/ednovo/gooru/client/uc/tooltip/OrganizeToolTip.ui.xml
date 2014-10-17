@@ -1,12 +1,31 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
-	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:panel="urn:import:org.ednovo.gooru.client.ui">
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:panel="urn:import:org.ednovo.gooru.client.ui"
+	xmlns:uc="urn:import:org.ednovo.gooru.client.uc">
 	<ui:style field="toolTip" src="ToolTip.css" />
-	<g:HTMLPanel styleName="{toolTip.tooltipContainer}" ui:field="panelCode">
-		<g:HTMLPanel styleName="{toolTip.myCollectoinTooltipContent}" ui:field="tooltipPanel">
+	<ui:with type="org.ednovo.gooru.client.mvp.home.HomeCBundle"
+		field="res" />
+	<ui:with type="org.ednovo.gooru.client.mvp.home.HomeCBundle"
+		field="res1" />
+	<g:HTMLPanel styleName="{res.css.tooltipContainer}" ui:field="panelCode">
+		<!-- <g:HTMLPanel styleName="{toolTip.myCollectoinTooltipContent}" ui:field="tooltipPanel">
 			<g:Label styleName="{toolTip.collectionToolTipLabel}" ui:field="lblCreateCollection" />
 			<g:Label styleName="{toolTip.folderToolTipLabel} {toolTip.folderIcon} {toolTip.textPadding}" ui:field="lblCreateFolder" />
 			<g:Label styleName="{toolTip.mycollectionsToolTipLabel} {toolTip.mycollectionsToolTipLabel}" ui:field="lblEditMyCollections" />
-		</g:HTMLPanel>
+		</g:HTMLPanel> -->
+		<uc:UlPanel ui:field="tooltipPanel" styleName="dropdown-menu {res.css.dropdowDisplay}">
+		    <uc:LiPanel>
+		       <g:Anchor styleName="{res.css.collectionToolTipLabel}" ui:field="lblCreateCollection" />		        
+		    </uc:LiPanel>
+		    <uc:LiPanel>
+				<g:Anchor styleName="{res.css.folderToolTipLabel} " ui:field="lblCreateFolder" />
+		    </uc:LiPanel>
+		    <uc:LiPanel>
+		        <g:Anchor ui:field="lblEditMyCollections" />
+		    </uc:LiPanel>
+		</uc:UlPanel>
 	</g:HTMLPanel>
 </ui:UiBinder> 
+
+	
+	

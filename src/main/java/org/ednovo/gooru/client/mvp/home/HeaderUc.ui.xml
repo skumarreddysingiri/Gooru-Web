@@ -1,549 +1,619 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
 	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:uc="urn:import:org.ednovo.gooru.client.uc"
-	xmlns:cc="urn:import:org.ednovo.gooru.client.mvp.home" xmlns:event="urn:import:org.ednovo.gooru.client.ui" >
+	xmlns:cc="urn:import:org.ednovo.gooru.client.mvp.home" xmlns:event="urn:import:org.ednovo.gooru.client.ui">
 	<ui:with type="org.ednovo.gooru.client.GooruCBundle" field="res" />
+	<ui:with type="org.ednovo.gooru.client.mvp.home.HomeCBundle"
+		field="res1" />
+
 	<ui:style>
 		.login {
-			color: #FFFFFF;
-			float: left;
-			/* margin-right:43px; */
+		color: #FFFFFF;
+		float: left;
+		/* margin-right:43px; */
 		}
-		
-				.borderRightMenu{
-			border-right:2px solid #515151;
+		.login:hover{
+		background-color:#393939;
+		}
+		.borderRightMenu{
+		border-right:2px solid #515151;
 
-	}
-		
-		.login a {
-			color: #FFFFFF !important;
-			float: left !important;
-			/* padding: 2px !important; */
-			text-decoration: none !important;
-			position: relative;
-			left: 10px;
 		}
-		
+
+		/* .login a {
+		color:
+		#FFFFFF !important;
+		float: left !important;
+		/*
+		padding: 2px !important;
+		*/
+		text-decoration: none !important;
+		position:
+		relative;
+		left: 10px;
+		}
+
 		.login a:hover {
-			opacity: 0.5;
+		opacity: 0.5;
 		}
-		
+		*/
 		.centerBar {
-			float: left;
-			display: none;
+		float: left;
+		display: none;
 		}
-		
+
 		.hideRegister {
-			display: none;
+		display: none;
 		}
-		
+
 		.guideContaier {
-			display: block;
+		display: block;
 		}
 		.loggedInfo{
-	       color: #0f76bb !important;
-           cursor: pointer;
-           float: left;
-        }
+		color: #0f76bb !important;
+		cursor: pointer;
+		float: left;
+		}
 		.loggedInfo:HOVER{
-	       opacity: 0.6;
-        }	
+		opacity: 0.6;
+		}
 		.gooruClassicViewContainer {
-			width: 100%;
+		width:
+		100%;
 		}
 		.gooruClassicViewInnerContainer {
-			/*width: 940px;*/
-			width:1167px;
-			margin: 0px auto; 
-			/*margin-left: 156px;*/
-			margin-top: 50px;
-			/*position: fixed;*/
-			z-index:9999;
+		/*width: 940px;*/
+		width:1167px;
+		margin: 0px auto;
+		/*margin-left: 156px;*/
+		margin-top: 50px;
+		/*position:
+		fixed;*/
+		z-index:9999;
 		}
 		.gooruLearningCaption{
-		    color: #FFFFFF !important;
-		    float: left;
-		    font-weight: bold;
-		    left: -10px;
-		    position: relative;
-		    top: 20px;
+		color: #FFFFFF !important;
+		float: left;
+		font-weight: bold;
+		left: -10px;
+		position: relative;
+		top:
+		20px;
 		}
 
 		/*New Header CSS*/
 
 		.header {
-			background-color: #515151;
-			height: 50px;
-			background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#515151), to(#333));
-			background: -webkit-linear-gradient(top, #515151, #333);
-			background: -moz-linear-gradient(top, #515151, #333);
-			background: -ms-linear-gradient(top, #515151, #333);
-			background: -o-linear-gradient(top, #515151, #333);
-			-moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
-			-webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
-			box-shadow: 0 0 10px rgba(0,0,0,.3);
-			position: fixed;
-			width: 100%;
-			z-index: 98;
-			top:0px
+		background-color: #515151;
+		height:
+		50px;
+		background: -webkit-gradient(linear, 0% 0%, 0% 100%,
+		from(#515151), to(#333));
+		background: -webkit-linear-gradient(top,
+		#515151, #333);
+		background: -moz-linear-gradient(top, #515151, #333);
+		background: -ms-linear-gradient(top, #515151, #333);
+		background:
+		-o-linear-gradient(top, #515151, #333);
+		-moz-box-shadow: 0 0 10px
+		rgba(0,0,0,.3);
+		-webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
+		box-shadow: 0 0 10px rgba(0,0,0,.3);
+		position: fixed;
+		width: 100%;
+		z-index: 98;
+		top:0px
 		}
 		.header-inner {
-			/*width: 1110px;*/
-			width:1000px;
-			height: 50px;
-			margin: auto;
+		/*width: 1110px;*/
+		width:1000px;
+		height: 50px;
+		margin: auto;
 		}
 		.gooru-logo {
-			margin: 10px;
-			float: left;
-			background: url(../images/NewHeader/gooru-beta.png) no-repeat;
-			background-position: 0 -727px;
-			width: 143px;
-			height: 35px;
+		margin: 10px;
+		float: left;
+		background: url(../images/NewHeader/gooru-beta.png) no-repeat;
+		background-position: 0 -727px;
+		width: 143px;
+		height: 35px;
 		}
 		.teachUserNameContainer {
-			width: 307px;
-			float: right;
-			height: 50px;
+		width: 307px;
+		float: right;
+		height: 50px;
 		}
 		.teachUserNameTextContainer {
-			float: left;
-			margin: 16px;
+		float: left;
+		margin: 16px;
 		}
 		.teachUserNameTextContainerAddAssignment
 		{
-			float:right;
-			margin-right:-12px;
-			
+		float:right;
+		margin-right:-12px;
+
 		}
 		.teachUserNameTextContainerAddAssignmentRight
 		{
-			width: 455px;
-			float: left;
+		width: 455px;
+		float: left;
 		}
 		.teachUserNameTextWhite:hover {
-			background-color: #393939;
-			padding: 16px;
+		background-color: #393939;
+		padding: 16px;
 		}
 		.teachUserNameTextWhiteActive{
-			background-color: #393939;
-			padding: 15px;
-			float: left;
-			color: #FFF;
-			font-family: arial;
-			font-size: 12px;
+		background-color: #393939;
+		padding: 15px;
+		float: left;
+		color: #FFF;
+		font-family: arial;
+		font-size: 12px;
 		}
 		.teachUserNameTextGrayActive{
-			background-color: #393939;
-			padding: 15px;
-			float: left;
-			color: #999;
-			font-family: arial;
-			font-size: 12px;
+		background-color: #393939;
+		padding: 15px;
+		float: left;
+		color: #999;
+		font-family: arial;
+		font-size: 12px;
 		}
 		.teachUserNameText {
-			font-family: Arial, Helvetica, sans-serif;
-			font-size: 12px;
-			color: #85B8DD;
-			float: left;
-			cursor:pointer;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 12px;
+		color: #85B8DD;
+		float: left;
+		cursor:pointer;
 		}
 		.teachUserNameTextSelected {
-			font-family: Arial, Helvetica, sans-serif;
-			font-size: 12px;
-			color: #FFF;
-			float: left;
-			cursor:pointer;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 12px;
+		color: #FFF;
+		float: left;
+		cursor:pointer;
 		}
 		.teachUserNameArrowContainer {
-			float: right;
-			width: 11px;
-			height: 6px;
-			cursor: pointer;
-			margin-top: 5px;
-			margin-left: 9px;
+		float: right;
+		width: 11px;
+		height: 6px;
+		cursor: pointer;
+		margin-top: 5px;
+		margin-left: 9px;
 		}
 		.teachUserNameArrowContainer {
-			cursor: pointer;
+		cursor: pointer;
 		}
 
 		.headerSearchContainer
 		{
-			float:left;
-			margin-left:97px;
-			width:295px;
-			height:100%;
+		float:left;
+		margin-left:97px;
+		width:295px;
+		height:100%;
 		}
 		.headerSearchInputBox
 		{
-			float:left;
-			margin-top:10px;
-			width:212px;
-			height:20px;
-			background-color:#ededed;
-			font-family:Arial, Helvetica, sans-serif;
-			font-size:12px;
+		float:left;
+		margin-top:10px;
+		width:212px;
+		height:20px;
+		background-color:#ededed;
+		font-family:Arial, Helvetica,
+		sans-serif;
+		font-size:12px;
 		}
 		.headerSearchButton
 		{
-			float:left;
-			width:56px;
-			height:23px;
-			cursor:pointer;
-			border-radius:4px;
-			margin-left:12px;
-			background-color:#1076bb;
-			margin-top:12px;
+		float:left;
+		width:56px;
+		height:23px;
+		cursor:pointer;
+		border-radius:4px;
+		margin-left:12px;
+		background-color:#1076bb;
+		margin-top:12px;
 		}
 		.headerSearchText
 		{
-			font-family:Arial, Helvetica, sans-serif;
-			float:left;
-			color:#FFF;
-			font-size:12px;
-			padding:4px 0px 0px 9px;
+		font-family:Arial, Helvetica, sans-serif;
+		float:left;
+		color:#FFF;
+		font-size:12px;
+		padding:4px 0px 0px 9px;
 		}
 		.headerMenuSeparated
 		{
-			float:left; width:1px; height:12px; margin:2px 7px 0px 7px; background:url(../images/separator.png);
+		float:left; width:1px; height:12px; margin:2px 7px 0px 7px;
+		background:url(../images/separator.png);
 		}
 		.headerMenuSetting
 		{
-			float:right; cursor:pointer; margin:10px 0px 0px 0px; width:26px; height:26px; background:url(../images/headernew/setting.png);
+		float:right; cursor:pointer; margin:10px 0px 0px 0px; width:26px;
+		height:26px; background:url(../images/headernew/setting.png);
 		}
 		.teachUserNameContainerHoverAddAssignment {
-			float: left;
-			 height: 50px;
-             width:455px;
-             margin-left:-6px;
+		float: left;
+		height: 50px;
+		width:455px;
+		margin-left:-6px;
 		}
 		.teachUserNameTextContainer {
-			float: left;
+		float:
+		left;
 		}
 		.teachUserNameTextWhite {
-			font-family: Arial, Helvetica, sans-serif;
-			font-size: 12px;
-			color: #FFF;
-			float: left;
-			cursor: pointer;
-			padding: 16px;
+		font-family: Arial, Helvetica,
+		sans-serif;
+		font-size: 12px;
+		color: #FFF;
+		float: left;
+		cursor: pointer;
+		padding: 16px;
 		}
 
 		.headerMenuSeparated {
-			float: left;
-			width: 1px;
-			height: 12px;
-			margin: 2px 7px 0px 7px;
-			background: url(../images/separator.png);
+		float: left;
+		width: 1px;
+		height:
+		12px;
+		margin: 2px 7px 0px 7px;
+		background: url(../images/separator.png);
 		}
-		.teachUserNameTextContainer .teachUserNameTextWhite:hover {
-			background-color: #393939;
-			padding: 16px;
+		.teachUserNameTextContainer
+		.teachUserNameTextWhite:hover {
+		background-color: #393939;
+		padding: 16px;
 		}
 		.teachUserNameArrowContainerNew {
-			float: right;
-			width: 11px;
-			height: 6px;
-			cursor: pointer;
-			margin-top: 20px;
+		float: right;
+		width: 11px;
+		height: 6px;
+		cursor: pointer;
+		margin-top: 20px;
 		}
 		.downArrow {
-			background: url(../images/teach-and-study-sprite.png) no-repeat;
-			background-position: 0 -671px;
-			width: 11px;
-			height: 6px;
+		background:
+		url(../images/teach-and-study-sprite.png) no-repeat;
+		background-position: 0 -671px;
+		width: 11px;
+		height: 6px;
 		}
 
 		.menuActive{
-			background-color: #393939;
-			padding: 15px;
-			float: left;
-			color: white;
-			font-family: arial;
-			font-size: 12px;
-			cursor: pointer;
-			padding: 16px;
-			
+		background-color: #393939;
+		padding: 15px;
+		float: left;
+		color: white;
+		font-family: arial;
+		font-size: 12px;
+		cursor: pointer;
+		padding: 16px;
+
 		}
 		div#LinkheaderElement5 {
-			padding: 10px;
-			padding-right: 5px;
-			height:30px;
+		padding: 10px;
+		padding-right: 5px;
+		height:30px;
 		}
-		
+
 		.menu{
-			color: white;
-			float: left;
-			cursor: pointer;
-			padding: 16px;
-			cursor: pointer;
+		color: white;
+		float: left;
+		cursor: pointer;
+		padding: 16px;
+		cursor:
+		pointer;
 		}
-		
+
 		.menu:hover{
-			background-color: #393939;
-			color: white;
-			float: left;
-			cursor: pointer;
-			padding: 16px;
-			cursor: pointer;
+		background-color: #393939;
+		color: white;
+		float:
+		left;
+		cursor: pointer;
+		padding: 16px;
+		cursor: pointer;
 		}
 		.menuUser{
-			color: white;
-			float: left;
-			cursor: pointer;
-			padding: 16px;
-			margin-left: -11px;
-			cursor: pointer;
+		color:
+		white;
+		float: left;
+		cursor: pointer;
+		padding: 16px;
+		margin-left: -11px;
+		cursor: pointer;
 		}
 		.menuUser:hover{
-			background-color: #393939;
-			color: white;
-			float: left;
-			cursor: pointer;
-			padding: 16px;
-			cursor: pointer;
+		background-color: #393939;
+		color:
+		white;
+		float: left;
+		cursor: pointer;
+		padding: 16px;
+		cursor: pointer;
 		}
-		
+
 		.teachUserNameTextBlack {
-			font-family: Arial, Helvetica, sans-serif;
-			font-size: 12px;
-			color: #999;
-			float: left;
-			cursor: pointer;
-			padding: 16px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 12px;
+		color: #999;
+		float: left;
+		cursor: pointer;
+		padding: 16px;
 		}
-          .shelfPanel {
-	    border-left: 1px dashed #CCCCCC;
-	    float: right;
-	    height: 97%;
-	    margin-bottom: -143px;
-	    min-height: 759px;
-	    position: absolute;
-	    right: 0;
-	    top: 51px;
-	    width: 311px;	    
+		.shelfPanel {
+		border-left: 1px dashed #CCCCCC;
+		float: right;
+		height:
+		97%;
+		margin-bottom: -143px;
+		min-height: 759px;
+		position: absolute;
+		right:
+		0;
+		top: 51px;
+		width: 311px;
 		}
 		.dropPanel {
-		    height: 100%;
-		    width: 311px;
-			overflow-y: auto !important;
+		height: 100%;
+		width: 311px;
+		overflow-y: auto !important;
 		}
-		
+
 		.questionImageBG{
-			width: 30px;
-			height: 50px;
- 
-			float: right;
-			padding: 0px 20px 0px 7px;
-			cursor: pointer;
+		width: 30px;
+		height:
+		50px;
+
+		float: right;
+		padding: 0px 20px 0px 7px;
+		cursor: pointer;
 		}
 		.questionImageBG:hover {
-			width: 30px;
-			height: 50px;
-			background: #393939;
-			float: right;
-			padding: 0px 20px 0px 7px;
-			cursor: pointer;
+		width: 30px;
+		height: 50px;
+		background: #393939;
+		float: right;
+		padding: 0px 20px 0px 7px;
+		cursor: pointer;
 
 		}
 		.questionImageBG:hover {
-			width: 30px;
-			height: 50px;
-			background: #393939;
-			float: right;
-			padding: 0px 20px 0px 7px;
+		width: 30px;
+		height: 50px;
+		background: #393939;
+		float: right;
+		padding: 0px 20px 0px 7px;
 		}
 
 		.helpText{
-			color: #fff;
-			padding: 11px 0px 0px 0px;
+		color: #fff;
+		padding: 11px 0px 0px 0px;
 		}
 		.helpAndSettingsContainer
 		{
-			float: right;
-			width: 29px;
-			margin-right: -18px;
+		float: right;
+		width: 29px;
+		margin-right: -18px;
 		}
 		.loginInfo{
-	         float: right;
-			width: 148px;
+		float: right;
+		width: 148px;
 		}
 		.classCodeTxtBox{
-	        margin-left: 15px;
-		    width: 133px;
-		    border: 1px #E3E3E3 solid !important;
-			background-color: #FFF !important;
-			font-size: 12px !important;
-			outline: 0;
-			padding: 6px;
-			font-family: Tahoma, sans-serif !important;
-			text-transform:uppercase;
-        }
-        .signUpButton
+		margin-left: 15px;
+		width: 133px;
+		border: 1px #E3E3E3
+		solid !important;
+		background-color: #FFF !important;
+		font-size: 12px
+		!important;
+		outline: 0;
+		padding: 6px;
+		font-family: Tahoma, sans-serif
+		!important;
+		text-transform:uppercase;
+		}
+		.signUpButton
 		{
-			margin: 10px 0px 10px 10px;
+		margin: 10px 0px
+		10px 10px;
 		}
 		.username
 		{
-			white-space: nowrap;
-			overflow: hidden;
-			text-overflow: ellipsis;
-			padding: 8px;
-			padding-right:0px;
-			float:left;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		padding: 8px;
+		padding-right:0px;
+		float:left;
 		}
-	   .resourceRightsPopupContainer{
-	        margin: 0 auto;
-            width: 479px;
+		.resourceRightsPopupContainer{
+		margin: 0 auto;
+		width: 479px;
 		}
 		.container{
-			height: 10px;
-			
+		height: 10px;
+
 		}
-	   .resourceRightsInnerPopup {
-			clear: both;
-			color: #515151;
-			font-size: 15px;
-			font-weight: normal;
-			border: 1px solid #ddd;
-			padding: 10px;
-			background-color: white;
-			-moz-box-shadow: 0 0 10px rgba(0,0,0,.2);
-			-webkit-box-shadow: 0 0 10px rgba(0,0,0,.2);
-			box-shadow: 0 0 10px rgba(0,0,0,.2);
-			border-radius: 4px;
-			-moz-border-radius: 4px;
-			-webkit-border-radius: 4px;
-			border-top-left-radius: 0px;
-			border-top-right-radius: 0px;
+		.resourceRightsInnerPopup {
+		clear: both;
+		color: #515151;
+		font-size: 15px;
+		font-weight: normal;
+		border: 1px solid
+		#ddd;
+		padding: 10px;
+		background-color: white;
+		-moz-box-shadow: 0 0 10px
+		rgba(0,0,0,.2);
+		-webkit-box-shadow: 0 0 10px rgba(0,0,0,.2);
+		box-shadow: 0 0 10px rgba(0,0,0,.2);
+		border-radius: 4px;
+		-moz-border-radius: 4px;
+		-webkit-border-radius: 4px;
+		border-top-left-radius: 0px;
+		border-top-right-radius: 0px;
 		}
-	   .anchorText {
-			text-decoration: none !important;
-			cursor: pointer;
-			margin-left: 3px;
+		.anchorText
+		{
+		text-decoration: none !important;
+		cursor: pointer;
+		margin-left: 3px;
 		}
 		.profileImage{
-			border-radius: 50px;
-			box-shadow: 0 0 0 2px #87badd;
-			width: 30px;
-			height: 30px;
-			float: left;
+		border-radius: 50px;
+		box-shadow: 0 0 0 2px #87badd;
+		width: 30px;
+		height: 30px;
+		float: left;
 		}
 		.divAlignLeft{
-	float:left;
+		float:left;
 
-	}
-	
+		}
+
 	</ui:style>
 	<g:HTMLPanel>
 
 		<!-- New Header -->
-		
-		<g:HTMLPanel styleName="{style.header}" ui:field="headerMainPanel">
-         <g:HTMLPanel styleName="{style.header-inner}">
-            <a ui:field="gooruLearning" style="opacity: 1;" >
-				<div class="{res.css.gooruLearningIcon}"></div>
-				<g:Label styleName="{style.gooruLearningCaption}" ui:field="lblBeta"></g:Label>
-			</a>
-            
-            <g:FlowPanel ui:field="editSearchInputFloPanel"
-						styleName="{res.css.editSearchInputBoxDiv}">
-						<g:VerticalPanel width="100%" height="100%" ui:field="headerSearchBarVerPanel">
-							<g:FlowPanel ui:field="headerSearchBarFloPanel">
-								<uc:AppSuggestBox ui:field="editSearchTxtBox"
-								styleName="{res.css.editInputBox}" />
-							<g:Button styleName="primary"
-								ui:field="editSearchBtn" />
-							</g:FlowPanel>
-						</g:VerticalPanel>
-					</g:FlowPanel>
-            	
-               <g:HTMLPanel styleName="{style.teachUserNameContainerHoverAddAssignment}" ui:field="mainDotsPanel">
-              <g:HTMLPanel styleName="{style.teachUserNameTextContainerAddAssignmentRight}"  ui:field="mainInnerDotsPanel">
-                   <g:HTMLPanel ui:field="dotsPanel" styleName="{style.teachUserNameTextContainerAddAssignment}">
-                     <uc:HTMLEventPanel ui:field="discoverLinkMain" styleName="{style.divAlignLeft}">
-                      <uc:HTMLEventPanel styleName="{style.menu} {style.borderRightMenu}" ui:field="discoverLinkContainer">
-                        	<g:Label ui:field="discoverLink" styleName="{res.css.discoverTextStyle}"/>
-                        	<g:HTMLPanel styleName="{res.css.discoverDropDown}" ui:field="dropDownImg"/>
-                        	<div style="border-right: 1px solid #616161; height: 34px;  /* margin-left: 69px; */ position: absolute; margin-left: 80px; margin-top: -9px;"></div>
-                        	
-                      </uc:HTMLEventPanel>
-                      <g:HTMLPanel ui:field="discovertooltippop"></g:HTMLPanel>
-                      </uc:HTMLEventPanel>
-                       <uc:HTMLEventPanel ui:field="organizeLinkMain" styleName="{style.divAlignLeft}">
-                      <uc:HTMLEventPanel ui:field="organizeLinkContainer">
-                        	<g:Label ui:field="organizeLink" />                        	  
-                      </uc:HTMLEventPanel>
-                       		<g:HTMLPanel ui:field="myCollectionsPop"></g:HTMLPanel>
-                      </uc:HTMLEventPanel>
-                           <uc:HTMLEventPanel ui:field="teachLinkMain" styleName="{style.divAlignLeft}">
-                      <uc:HTMLEventPanel styleName="{style.teachUserNameTextBlack}" ui:field="teachLinkContainer">
-                        	<g:Label ui:field="teachLink" />                  
-                      </uc:HTMLEventPanel>
-                         	<g:HTMLPanel ui:field="myClassesPop"></g:HTMLPanel>
-                      </uc:HTMLEventPanel>
-                      <!-- This is hidden -->
-                      <uc:HTMLEventPanel styleName="{style.teachUserNameTextBlack}" ui:field="studyLinkContainer">
-                        	<g:Label ui:field="studyLink" />
-                        	
-                      </uc:HTMLEventPanel>
 
-                      <uc:HTMLEventPanel styleName="{style.menu} {style.borderRightMenu}" ui:field="LoginLinkContainer">
-                          	<g:Image styleName="{style.profileImage}" ui:field="imgUserProfile"></g:Image>
-                      		<g:Label styleName="{style.username}" ui:field="loggedInfoLbl" />
-                      		     
-                      </uc:HTMLEventPanel>
-                      <g:HTMLPanel styleName="{style.teachUserNameArrowContainerNew}">
-                      <div style="border-right: 1px solid #616161; height: 34px;  /* margin-left: 69px; */ position: absolute; margin-top: -13px;"></div>  
-                         <g:HTMLPanel styleName="{style.downArrow}"></g:HTMLPanel>
-                        
-                      </g:HTMLPanel>                       
-                   
-                  				
-			</g:HTMLPanel>
-			</g:HTMLPanel>
-			<g:HTMLPanel styleName="{style.helpAndSettingsContainer}">
-					<g:FlowPanel styleName="{res.css.loginUserNameContainer}" ui:field="signUpInfo">						
-						<g:Label ui:field="logoutDownArrowLbl" styleName="{res.css.logoutDownArrow}" />
-					 </g:FlowPanel>
-                   	<!-- <uc:HTMLEventPanel styleName="{style.questionImageBG}" ui:field="gooruGuidePanel">
-                		<g:Label styleName="{style.guideContaier}" ui:field="gooruGuideImgLbl">    </g:Label>    
-                	</uc:HTMLEventPanel>  -->
-              </g:HTMLPanel>  	    
-                
-					
-              </g:HTMLPanel>
-                    <g:FlowPanel ui:field="logInfoFloPanel" styleName="{style.loginInfo}">
-                       <g:HTMLPanel styleName="{style.login}">
-							<!-- <g:Label ui:field="registerLinkLbl" styleName="{res.css.loggedInfo}"/>  -->
-							<g:Label ui:field="loginLink" styleName="{res.css.loggedInfo}"/>    
-					  </g:HTMLPanel> 
-					  <g:HTMLPanel>
-					      <!-- <uc:TextBoxWithPlaceholder ui:field="classCodeTxtBox"
-							styleName="{style.classCodeTxtBox}" /> -->
-							<g:Button styleName="{style.signUpButton} primary" ui:field="registerLinkLbl"/> 
-					  </g:HTMLPanel>
-				   </g:FlowPanel>
-         </g:HTMLPanel>
-         <uc:HTMLEventPanel styleName="{style.resourceRightsPopupContainer}"  ui:field="acctActivationPl">
-					<g:HTMLPanel styleName="{style.resourceRightsInnerPopup}">
-						<!-- <g:HTMLPanel ui:field="htmlContentRightsDesc"></g:HTMLPanel> -->
-						<g:HTMLPanel styleName="{style.container}">
-     						<g:Label ui:field="confirmEmailText"></g:Label>
-     						<g:Anchor styleName="{style.anchorText}" ui:field="resendEmailAncr"/>
-     						<g:Label ui:field="thanksLbl"></g:Label>
-    	 				</g:HTMLPanel>
+		<uc:HeaderPanel ui:field="headerMainPanel">
+			<g:HTMLPanel styleName="container">
+				<g:HTMLPanel styleName="row">
+					<g:HTMLPanel styleName="col-md-2 col-sm-3 col-xs-3 {res1.css.logo}">
+						<a ui:field="gooruLearning" style="opacity: 1;">
+							<div class="{res.css.gooruLearningIcon}"></div>
+							<g:Label styleName="{style.gooruLearningCaption}"
+								ui:field="lblBeta"></g:Label>
+						</a>
 					</g:HTMLPanel>
-				</uc:HTMLEventPanel>
-      </g:HTMLPanel>
-		
+					<g:HTMLPanel styleName="mobileStyle">
+						<g:FlowPanel ui:field="editSearchInputFloPanel"
+							styleName="col-md-3 col-sm-5 {res1.css.searchbox}">
+							<g:HTMLPanel width="100%" height="100%"
+								ui:field="headerSearchBarVerPanel" styleName="navbar-form navbar-left">
+								<g:FlowPanel ui:field="headerSearchBarFloPanel"
+									styleName="form-group">
+									<uc:AppSuggestBox ui:field="editSearchTxtBox"
+										styleName="form-control" />
+								</g:FlowPanel>
+								<g:Button styleName="primary" ui:field="editSearchBtn" />
+							</g:HTMLPanel>
+						</g:FlowPanel>
+						<g:HTMLPanel styleName="col-md-6 mainmenu {res1.css.mainmenu}">
+							<uc:NavPanel
+								styleName="navbar navbar-default navbar-static-top {res1.css.navbar_default}"
+								role="navigation">
+								<g:HTMLPanel>
+									<g:HTMLPanel styleName="navbar-header" ui:field="mainDotsPanel">
+										<g:Button styleName="navbar-toggle" ui:field="toggleButton">
+											<span class="sr-only">Toggle navigation</span>
+											<span class="icon-bar"></span>
+											<span class="icon-bar"></span>
+											<span class="icon-bar"></span>
+										</g:Button>
+										<g:HTMLPanel
+											styleName="collapse navbar-collapse {res1.css.navbar_collapse}"
+											ui:field="mainInnerDotsPanel">
+											<uc:UlPanel ui:field="dotsPanel" styleName="nav navbar-nav">
+												<uc:LiPanel styleName="dropdown">
+													<uc:HTMLEventPanel ui:field="discoverLinkMain">
+														<uc:HTMLEventPanel ui:field="discoverLinkContainer">
+															<g:Anchor ui:field="discoverLink" styleName="dropdown-toggle" />
+															<uc:BPanel styleName="caret" ui:field="dropDownImg" />
+															<!-- <div style="border-right: 1px solid #616161; height: 
+																34px; /* margin-left: 69px; */ position: absolute; margin-left: 80px; margin-top: 
+																-9px;"></div> -->
+
+														</uc:HTMLEventPanel>
+														<g:HTMLPanel ui:field="discovertooltippop"></g:HTMLPanel>
+													</uc:HTMLEventPanel>
+												</uc:LiPanel>
+												<uc:LiPanel styleName="noborder">
+													<uc:HTMLEventPanel ui:field="organizeLinkMain">
+														<uc:HTMLEventPanel ui:field="organizeLinkContainer">
+															<g:Anchor ui:field="organizeLink" />
+														</uc:HTMLEventPanel>
+														<g:HTMLPanel ui:field="myCollectionsPop"></g:HTMLPanel>
+													</uc:HTMLEventPanel>
+												</uc:LiPanel>
+												<uc:LiPanel>
+													<uc:HTMLEventPanel ui:field="teachLinkMain">
+														<uc:HTMLEventPanel ui:field="teachLinkContainer">
+															<g:Anchor ui:field="teachLink" />
+														</uc:HTMLEventPanel>
+														<g:HTMLPanel ui:field="myClassesPop"></g:HTMLPanel>
+													</uc:HTMLEventPanel>
+												</uc:LiPanel>
+												<!-- This is hidden -->
+												<uc:LiPanel>
+													<uc:HTMLEventPanel ui:field="studyLinkContainer">
+														<g:Anchor ui:field="studyLink" />
+													</uc:HTMLEventPanel>
+												</uc:LiPanel>
+												<uc:LiPanel>
+													<uc:HTMLEventPanel styleName="{style.menu} {style.borderRightMenu}"
+														ui:field="LoginLinkContainer">
+														<g:Image styleName="{style.profileImage} hidden-sm hidden-xs"
+															ui:field="imgUserProfile"></g:Image>
+														<g:Anchor styleName="{style.username}" ui:field="loggedInfoLbl" />
+													</uc:HTMLEventPanel>
+												</uc:LiPanel>
+												<!-- <uc:LiPanel> <g:HTMLPanel styleName="{style.teachUserNameArrowContainerNew}"> 
+													<div style="border-right: 1px solid #616161; height: 34px; /* margin-left: 
+													69px; */ position: absolute; margin-top: -13px;"></div> <g:HTMLPanel styleName="{style.downArrow}"></g:HTMLPanel> 
+													</g:HTMLPanel> </uc:LiPanel> -->
+												<uc:LiPanel styleName="noborder">
+													<g:FlowPanel ui:field="logInfoFloPanel">
+														<g:HTMLPanel styleName="col-md-6 {res1.css.login}">
+															<!-- <g:Label ui:field="registerLinkLbl" styleName="{res.css.loggedInfo}"/> -->
+															<g:Label ui:field="loginLink" styleName="{res1.css.loggedInfo}" />
+														</g:HTMLPanel>
+														<g:HTMLPanel styleName="col-md-6 hidden-sm hidden-xs">
+															<g:Button styleName="primary {res1.css.signup}"
+																ui:field="registerLinkLbl" />
+														</g:HTMLPanel>
+														<g:HTMLPanel styleName="clearfix"></g:HTMLPanel>
+													</g:FlowPanel>
+												</uc:LiPanel>
+												<uc:LiPanel>
+														<g:FlowPanel ui:field="signUpInfo">
+															<g:Label ui:field="logoutDownArrowLbl" styleName="{res1.css.logoutDownArrow}" />
+														</g:FlowPanel>
+														<g:HTMLPanel ui:field="settingOptionsPopup"></g:HTMLPanel>
+												</uc:LiPanel>
+											</uc:UlPanel>
+										</g:HTMLPanel>
+									</g:HTMLPanel>
+								</g:HTMLPanel>
+							</uc:NavPanel>
+						</g:HTMLPanel>
+
+					</g:HTMLPanel>
+
+				</g:HTMLPanel>
+
+			</g:HTMLPanel>
+
+			<uc:HTMLEventPanel styleName="{res1.css.resourceRightsPopupContainer} hidden-sm hidden-xs"	ui:field="acctActivationPl">
+				<g:HTMLPanel styleName="{style.resourceRightsInnerPopup}">
+					<!-- <g:HTMLPanel ui:field="htmlContentRightsDesc"></g:HTMLPanel> -->
+					<g:HTMLPanel styleName="{style.container}">
+						<g:Label ui:field="confirmEmailText"></g:Label>
+						<g:Anchor styleName="{style.anchorText}" ui:field="resendEmailAncr" />
+						<g:Label ui:field="thanksLbl"></g:Label>
+					</g:HTMLPanel>
+				</g:HTMLPanel>
+			</uc:HTMLEventPanel>
+		</uc:HeaderPanel>
+
 		<!-- New Header End -->
 		<!-- This is not used. Hidden through Code. -->
-		<!-- <g:FlowPanel styleName="{style.gooruClassicViewContainer}" ui:field="goToClasicGooruPanel">
-			<g:FlowPanel styleName="{style.gooruClassicViewInnerContainer}"  ui:field="goToClasicInnerPanel">
-				<g:Label text="Go to Classic Gooru" ui:field="gooruClassicViewLbl" styleName="{res.css.gooruClassicView}"></g:Label>
-			</g:FlowPanel>
-		</g:FlowPanel> -->
-	        	
+		<!-- <g:FlowPanel styleName="{style.gooruClassicViewContainer}" ui:field="goToClasicGooruPanel"> 
+			<g:FlowPanel styleName="{style.gooruClassicViewInnerContainer}" ui:field="goToClasicInnerPanel"> 
+			<g:Label text="Go to Classic Gooru" ui:field="gooruClassicViewLbl" styleName="{res.css.gooruClassicView}"></g:Label> 
+			</g:FlowPanel> </g:FlowPanel> -->
+
 	</g:HTMLPanel>
 </ui:UiBinder> 

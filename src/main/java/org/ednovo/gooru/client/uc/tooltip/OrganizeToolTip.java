@@ -34,12 +34,14 @@ import org.ednovo.gooru.client.gin.AppClientFactory;
 import org.ednovo.gooru.client.mvp.folders.event.RefreshFolderType;
 import org.ednovo.gooru.client.mvp.shelf.collection.folders.events.RefreshFolderItemEvent;
 import org.ednovo.gooru.client.mvp.shelf.collection.folders.uc.FolderPopupUc;
+import org.ednovo.gooru.client.uc.UlPanel;
 import org.ednovo.gooru.shared.i18n.MessageProperties;
 import org.ednovo.gooru.shared.model.folder.FolderDo;
 import org.ednovo.gooru.shared.util.StringUtil;
 import org.ednovo.gooru.shared.util.UAgentInfo;
 
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.dom.client.Style.Display;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.dom.client.HasMouseOutHandlers;
@@ -50,9 +52,9 @@ import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.Window.Navigator;
+import com.google.gwt.user.client.ui.Anchor;
+import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.HTMLPanel;
-import com.google.gwt.user.client.ui.Label;
-import com.google.gwt.user.client.ui.PopupPanel;
 import com.google.gwt.user.client.ui.Widget;
 
 
@@ -70,7 +72,7 @@ import com.google.gwt.user.client.ui.Widget;
  *
  * @Reviewer: Gooru Team
  */
-public class OrganizeToolTip extends PopupPanel implements HasMouseOutHandlers{
+public class OrganizeToolTip extends Composite implements HasMouseOutHandlers{
 	
 	private static OrganizeTipUiBinder uiBinder = GWT
 			.create(OrganizeTipUiBinder.class);
@@ -80,9 +82,10 @@ public class OrganizeToolTip extends PopupPanel implements HasMouseOutHandlers{
 	interface OrganizeTipUiBinder extends UiBinder<Widget, OrganizeToolTip> {
 	}
 	
-	@UiField Label lblCreateFolder,lblCreateCollection, lblEditMyCollections;
+	@UiField Anchor lblCreateFolder,lblCreateCollection, lblEditMyCollections;
 	
-	@UiField HTMLPanel tooltipPanel,panelCode;
+	@UiField HTMLPanel panelCode;
+	@UiField UlPanel tooltipPanel;
 	
 	public OrganizeToolTip() {
 		setWidget(uiBinder.createAndBindUi(this));
@@ -106,7 +109,7 @@ public class OrganizeToolTip extends PopupPanel implements HasMouseOutHandlers{
 		panelCode.getElement().setId("pnlPanelCode");
 		tooltipPanel.getElement().setId("pnlTooltipPanel");
 		
-		  Boolean isIpad = !!Navigator.getUserAgent().matches("(.*)iPad(.*)");
+		  /*Boolean isIpad = !!Navigator.getUserAgent().matches("(.*)iPad(.*)");
 		  Boolean isAndriod = !!Navigator.getUserAgent().matches("(.*)Android(.*)");
 		  Boolean isWinDskp = !!Navigator.getUserAgent().matches("(.*)NT(.*)");
 		  
@@ -122,9 +125,9 @@ public class OrganizeToolTip extends PopupPanel implements HasMouseOutHandlers{
 		  }		  
 		  else
 		  {
-			  tooltipPanel.getElement().setAttribute("style", "position:fixed;top:50px;");
+			 // tooltipPanel.getElement().setAttribute("style", "position:fixed;top:50px;");
 		  }
-		
+		*/
 		lblCreateFolder.addClickHandler(new ClickHandler() {
 			@Override
 			public void onClick(ClickEvent event) {
@@ -154,7 +157,6 @@ public class OrganizeToolTip extends PopupPanel implements HasMouseOutHandlers{
 			
 			@Override
 			public void onMouseOut(MouseOutEvent event) {
-			    hide();
 			}
 		});
         

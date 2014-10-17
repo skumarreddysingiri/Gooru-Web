@@ -45,6 +45,8 @@ import org.ednovo.gooru.client.mvp.home.register.RegisterVc;
 import org.ednovo.gooru.client.mvp.search.event.SetHeaderZIndexEvent;
 import org.ednovo.gooru.client.uc.AppMultiWordSuggestOracle;
 import org.ednovo.gooru.client.uc.AppSuggestBox;
+import org.ednovo.gooru.client.uc.H2Panel;
+import org.ednovo.gooru.client.uc.PPanel;
 import org.ednovo.gooru.client.ui.PeListPanel;
 import org.ednovo.gooru.client.util.MixpanelUtil;
 import org.ednovo.gooru.shared.i18n.MessageProperties;
@@ -103,7 +105,9 @@ public class HomeView extends BaseViewWithHandlers<HomeUiHandlers> implements Is
 
 	@UiField HTMLPanel gooruPanel, panelLandingPage, contributorsContainer, panelStandardLibraries, panelDistrictLibraries, panelPartnerLibraries;
 	@UiField Button btnSignUp, btnMoreOnCollections,viewSampleResportsBtn;
-	@UiField Label lblHeading, lblSubHeading; 
+	@UiField H2Panel lblHeading;
+	@UiField PPanel  lblSubHeading;
+	
 //	@UiField TextBoxWithPlaceholder txtSearch;
 	@UiField Button btnSearch;
 	@UiField Anchor achLearn, achTerms, achPrivacy,achCopyright;//achDataPolicy
@@ -578,8 +582,6 @@ public class HomeView extends BaseViewWithHandlers<HomeUiHandlers> implements Is
 		}else{
 			btnSignUp.setVisible(false);
 		}
-		
-		
 		Window.enableScrolling(true);
 	}
 

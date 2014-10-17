@@ -100,8 +100,8 @@ body {
 
 /* 960 grid css */
 body {
-	min-width: 960px;
-}
+/* 	min-width: 960px;
+ */}
 
 /* Container
 ----------------------------------------------------------------------------------------------------*/
@@ -1677,7 +1677,7 @@ iframe#taMessage body{
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
-	margin: 0 auto -650px;
+	/* margin: 0 auto -650px; */
 }
 .deviceHeader {
 	background-color: #515151;

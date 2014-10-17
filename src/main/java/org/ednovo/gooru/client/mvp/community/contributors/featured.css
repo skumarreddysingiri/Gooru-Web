@@ -1,18 +1,23 @@
-.contriburotsListContainer{
-	float:left;
-}
-.profileImage{
-	border-radius: 50px;
-	box-shadow: 0 0 0 2px #87badd;
-	width: 56px;
-	height: 56px;
-	float: left;
-	margin-right: 10px;
-}
-.panelFeaturedContributors{
-	line-height: 58px;
+.contriburotsListContainer {
+	display: inline-block;
+	vertical-align: middle;
 }
 
-.viewMore{
-	font-size: 16px;
+.profileImage {
+	border-radius: 50px;
+	box-shadow: 0 0 0 2px #87badd;
+	width: 56px !important;
+	height: 56px !important;
+	margin-right: 6px;
+	margin-top: 6px;
+}
+
+.panelFeaturedContributors {
+	/* line-height: 58px; */
+	
+}
+
+.viewMore {
+	display: inline-block;
+	vertical-align: middle;
 }

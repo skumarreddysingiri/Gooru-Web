@@ -5,26 +5,12 @@ import com.google.gwt.user.client.ui.ComplexPanel;
 import com.google.gwt.user.client.ui.InsertPanel;
 import com.google.gwt.user.client.ui.Widget;
 
-public class PPanel extends ComplexPanel implements InsertPanel {
-
-	String text;
-	
-	public PPanel() {
-		setElement(Document.get().createPElement());
+public class NavPanel extends ComplexPanel implements InsertPanel {
+	String role;
+	public NavPanel() {
+		setElement(Document.get().createElement("nav"));
     }
 	
-	
-	public String getText() {
-		return text;
-	}
-
-
-	public void setText(String text) {
-		getElement().setInnerText(text);
-		this.text = text;
-	}
-
-
 	@Override
 	public void add(Widget w){
 	add(w,getElement());
@@ -35,4 +21,13 @@ public class PPanel extends ComplexPanel implements InsertPanel {
 		insert(w, getElement(), beforeIndex, true);
 	}
 
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		getElement().setAttribute("role",role);
+		this.role = role;
+	}
+	
 }

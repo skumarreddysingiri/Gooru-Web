@@ -27,6 +27,7 @@ package org.ednovo.gooru.client.mvp.home;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.resources.client.ClientBundle;
 import com.google.gwt.resources.client.CssResource;
+import com.google.gwt.resources.client.CssResource.NotStrict;
 
 /**
  * @author Search Team
@@ -36,6 +37,17 @@ public interface HomeCBundle extends ClientBundle{
 	
 	static final HomeCBundle INSTANCE = GWT.create(HomeCBundle.class);
 	
+	@NotStrict
+	@Source("Home.css")
+	HomeCss css();
+	
+	@NotStrict
+	@Source("res_homestyle.css")
+	HomeCss getResponsiveStyle();
+	
+	@NotStrict
+	@Source("res_home2style.css")
+	HomeCss getResponsive1Style();
 	public interface HomeCss extends CssResource{
 		
 		/*HomeView*/
@@ -538,8 +550,71 @@ public interface HomeCBundle extends ClientBundle{
 
 		String description();
 		String setMarketingPopUpCenter();
+		String banner();
+		String shadow();
+		String bannerInner();
+		String caption();
+		/*String h2();
+		String p();*/
+		String btn();
 
-	}
-     @Source("Home.css")
-     HomeCss css();
+		@ClassName("navbar-default")
+		String navbar_default();
+		@ClassName("navbar-collapse")
+		String navbar_collapse();
+		@ClassName("navbar-nav")
+		String navbar_nav();
+		String small();
+		@ClassName("container-fluid")
+		String container_fluid();
+		String communityblock();
+		String getStart();
+		String getInner();
+		String getInnerRight();
+		String getContentContainer();
+		String getStartedIMG();
+		String getCaption();
+		String mission();
+		String partext();
+		
+		String yourSupport();
+		String imgBox();
+		String margin();
+		String gooruBadge();
+		String goorubadge();
+		String badgepadd();
+		String social();
+		String noMargin();
+		String logo();
+		String searchbox();
+		String mainmenu();
+		String sInner();
+		String searchContainer();
+		String signup();
+		String dropdowDisplay();
+		String districDropDown();
+		String partnersDropdown();
+		String rightArrow();
+		String resourceRightsPopupContainer();
+		String collectionToolTipLabel();
+		String folderToolTipLabel();
+		String tooltipContainer();
+		String menuActive();
+		String menu();
+		String logoutPanel();
+		String loggedInfo();
+		String login();
+		String logoutDownArrow();
+		String searchButton();
+		String dataTableResultHeading();
+		String menuHeader();
+		String blueBand();
+		String dataTableResult();
+		String rightBlock1();
+		String blockContent();
+		String districtLibraryContainer();
+		String blockHeader();
+		String last();
+	}	
+    
 }

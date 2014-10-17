@@ -25,7 +25,6 @@
 
 package org.ednovo.gooru.client;
 
-import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -97,6 +96,9 @@ public class GooruEntry implements EntryPoint {
 		StyleInjector.injectAtEnd("@media (min-width: 240px) and (max-width: 767px) {" + PlayerStyleBundle.INSTANCE.getPlayerMobileStyle().getText() + "}");
 		StyleInjector.injectAtEnd("@media (min-width: 768px) and (max-width: 1000px) {" + PlayerStyleBundle.INSTANCE.getPlayerTabletStyle().getText() + "}");
 		PlayerStyleBundle.INSTANCE.getPlayerStyleResource().ensureInjected();
+		StyleInjector.injectAtEnd("@media (min-width: 768px) and (max-width: 991px) {"+HomeCBundle.INSTANCE.getResponsiveStyle().getText()+"}");
+		StyleInjector.injectAtEnd("@media (max-width: 767px){"+HomeCBundle.INSTANCE.getResponsive1Style().getText()+"}");
+		HomeCBundle.INSTANCE.css().ensureInjected();
 	}
 	
 	/* 

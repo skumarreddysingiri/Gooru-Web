@@ -38,15 +38,15 @@ import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.uibinder.client.UiHandler;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Anchor;
+import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.FlowPanel;
-import com.google.gwt.user.client.ui.PopupPanel;
 import com.google.gwt.user.client.ui.Widget;
 
 /**
  * @author Search Team
  * 
  */
-public class LogoutPanelVc extends PopupPanel{
+public class LogoutPanelVc extends Composite{
 
 	@UiField
 	Anchor logoutAnr, anrSettings;
@@ -80,7 +80,7 @@ public class LogoutPanelVc extends PopupPanel{
 	 * Class constructor
 	 */
 	public LogoutPanelVc() {
-		super(true);
+	
 		setWidget(uiBinder.createAndBindUi(this));
 		
 		anrSettings.setText(i18n.GL0192());
@@ -134,7 +134,7 @@ public class LogoutPanelVc extends PopupPanel{
 	
 	@UiHandler("logoutAnr")
 	public void logoutPopupClicked(ClickEvent clickEvent) {
-		hide();
+		logPanel.setVisible(false);
 		Window.enableScrolling(false);
         AppClientFactory.fireEvent(new SetHeaderZIndexEvent(98, false));
         logoutPopupVc = new LogoutPopupVc();
@@ -160,9 +160,19 @@ public class LogoutPanelVc extends PopupPanel{
 //			classicGooruAnr.setVisible(false);
 //		}
 		classicGooruAnr.setVisible(false);
-		logPanel.getElement().getStyle().setHeight(100, Unit.PX);
+		//logPanel.getElement().getStyle().setHeight(100, Unit.PX);
 	}
 	
+	public void show(){
+		logPanel.setVisible(true);
+	}
+	public void hide(){
+		logPanel.setVisible(false);
+
+	}
+	public boolean isShowing(){
+		return logPanel.isVisible();
+	}
 	/**
 	 * Initialise user voice feedback popup
 	 * 

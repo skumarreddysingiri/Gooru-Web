@@ -1,29 +1,38 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
-	xmlns:g="urn:import:com.google.gwt.user.client.ui"  xmlns:panel="urn:import:org.ednovo.gooru.client.uc">
-	<ui:with type="org.ednovo.gooru.client.mvp.classpages.ClasspageListPopupViewCBundle" field="res" />
-		<g:FlowPanel ui:field="panelMainContainer">
- 			<!-- <g:Label ui:field="lblClasspageList" styleName="{res.css.classpageListTitle}"></g:Label>
- 			<g:HTMLPanel styleName="{res.css.classpageBottomLine}"/> -->
-		    <g:HTMLPanel ui:field="htmlPanelContentContainer" styleName="{res.css.htmlPanelContentContainer}">
-		        <g:Label styleName="{res.css.loadingText}" ui:field="lblLoading"></g:Label>
-		        <g:HTMLPanel styleName="{res.css.htmlPanelNoClasspageContainer}" ui:field="htmlPanelNoClasspageContainer">
-		            <g:Label ui:field="lblNoClasspageYet" styleName="{res.css.noClasspageYet}"></g:Label>
-		            <g:InlineLabel ui:field="inLineLblCheckOut"></g:InlineLabel>
-		        </g:HTMLPanel>
-	            <g:ScrollPanel ui:field="spanelCollectionList" styleName="{res.css.scrollPanelClasspageList}">
-	        		<g:VerticalPanel styleName="{res.css.htmlPanelClasspageList}" ui:field="htmlPanelClasspageList">
-	        		    
-	        		</g:VerticalPanel>
-	            </g:ScrollPanel>
-		    </g:HTMLPanel> 
-		    <!-- <g:HTMLPanel styleName="{res.css.classpageBottomLine}"/> -->
-		    <g:Anchor ui:field="ancNewClasspage" styleName="{res.css.newClasspageLink}"></g:Anchor>
-		    <g:HTMLPanel styleName="{res.css.inputContainer}">
-				<g:Label styleName="{res.css.tooltipContentTitle}" ui:field="lblTitle" />
-				<panel:TextBoxWithPlaceholder ui:field="classCodeTxtBox"
-								styleName="{res.css.classCodeTxtBox}" />
-				<g:Button styleName="primary" ui:field="enterLbl"></g:Button>
-			</g:HTMLPanel>
-		</g:FlowPanel>
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:panel="urn:import:org.ednovo.gooru.client.uc">
+	<ui:with
+		type="org.ednovo.gooru.client.mvp.classpages.ClasspageListPopupViewCBundle"
+		field="res" />
+	<ui:with type="org.ednovo.gooru.client.mvp.home.HomeCBundle"
+		field="res1" />
+	<g:FlowPanel ui:field="panelMainContainer">
+		<!-- <g:Label ui:field="lblClasspageList" styleName="{res.css.classpageListTitle}"></g:Label> 
+			<g:HTMLPanel styleName="{res.css.classpageBottomLine}"/> -->
+		<!-- <g:HTMLPanel ui:field="htmlPanelContentContainer" styleName="{res.css.htmlPanelContentContainer}"> 
+			<g:Label styleName="{res.css.loadingText}" ui:field="lblLoading"></g:Label> 
+			<g:HTMLPanel styleName="{res.css.htmlPanelNoClasspageContainer}" ui:field="htmlPanelNoClasspageContainer"> 
+			<g:Label ui:field="lblNoClasspageYet" styleName="{res.css.noClasspageYet}"></g:Label> 
+			<g:InlineLabel ui:field="inLineLblCheckOut"></g:InlineLabel> </g:HTMLPanel> 
+			<g:ScrollPanel ui:field="spanelCollectionList" styleName="{res.css.scrollPanelClasspageList}"> 
+			<g:VerticalPanel styleName="{res.css.htmlPanelClasspageList}" ui:field="htmlPanelClasspageList"> 
+			</g:VerticalPanel> </g:ScrollPanel> </g:HTMLPanel> -->
+		<!-- <g:HTMLPanel styleName="{res.css.classpageBottomLine}"/> -->
+		
+	
+		<panel:UlPanel styleName="dropdown-menu {res1.css.dropdowDisplay} {res1.css.classpageListContainer}">
+			<panel:LiPanel>
+				<g:Anchor ui:field="ancNewClasspage" styleName="{res.css.newClasspageLink}"></g:Anchor>
+			</panel:LiPanel>
+			<panel:LiPanel>
+				<g:HTMLPanel styleName="{res.css.inputContainer}">
+					<g:Label styleName="{res.css.tooltipContentTitle}"
+						ui:field="lblTitle" />
+					<panel:TextBoxWithPlaceholder
+						ui:field="classCodeTxtBox" styleName="{res.css.classCodeTxtBox}" />
+					<g:Button styleName="primary" ui:field="enterLbl"></g:Button>
+				</g:HTMLPanel>
+			</panel:LiPanel>
+		</panel:UlPanel>
+	</g:FlowPanel>
 </ui:UiBinder> 

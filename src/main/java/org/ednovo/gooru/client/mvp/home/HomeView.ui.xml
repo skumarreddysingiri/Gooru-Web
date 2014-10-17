@@ -6,105 +6,138 @@
 	<ui:with field="i18n" type="org.ednovo.gooru.shared.i18n.MessageProperties" />
 	<g:HTMLPanel>
 		<!-- <g:HTMLPanel styleName="step fi-address-book size-72"></g:HTMLPanel> -->
-		<g:HTMLPanel ui:field="gooruPanel" />
+		<g:HTMLPanel ui:field="gooruPanel"/>
 		<g:HTMLPanel ui:field="panelLandingPage">
-			<g:HTMLPanel styleName="{res.css.headerPanel}">
-				<g:Label styleName="{res.css.header}" ui:field="lblHeading"
-					text="{i18n.GL2046}"></g:Label>
-				<g:Label styleName="{res.css.subheader}" ui:field="lblSubHeading"
-					text="{i18n.GL2047}"></g:Label>
-				<g:Button styleName="primary {res.css.signUpButton}"
-					ui:field="btnSignUp" text="{i18n.GL2101}"></g:Button>
-				<g:HTML styleName="{res.css.description}" ui:field="htmlDescription"
-					text=""></g:HTML>
+			<g:HTMLPanel styleName="{res.css.banner}">
+				<g:HTMLPanel styleName="container">
+					<g:HTMLPanel styleName="{res.css.shadow}">
+					    <g:HTMLPanel styleName="row">
+				<g:HTMLPanel styleName="col-md-12">
+					<g:HTMLPanel styleName="{res.css.bannerInner}">
+						<g:HTMLPanel styleName="{res.css.caption}">
+						<tbp:H2Panel ui:field="lblHeading" text="{i18n.GL2046}">
+ 							
+ 						</tbp:H2Panel>
+						<tbp:PPanel ui:field="lblSubHeading" text="{i18n.GL2047}">
+						</tbp:PPanel>
+						<tbp:PPanel>
+							<g:Button styleName="primary" ui:field="btnSignUp" text="{i18n.GL2101}"></g:Button>
+						</tbp:PPanel>
+						<tbp:PPanel>
+							<g:HTML   ui:field="htmlDescription"	text=""></g:HTML>
+						</tbp:PPanel>
+						
+						</g:HTMLPanel>
+							<g:Image url="images/banner2.png" styleName="img-responsive"></g:Image>
+						
+					</g:HTMLPanel>
 			</g:HTMLPanel>
-			<section class="searchContainer">
-				<div class="containerMain">
+			</g:HTMLPanel>
+					</g:HTMLPanel>    
+				</g:HTMLPanel>
+			    	    
+			</g:HTMLPanel>
+					
+			<!-- 
+ -->			<section class="{res.css.searchContainer}">
+				<div class="container">
 					<div class="row">
-						<div class="col-xs-3 searchMAIN">
-							<div class="sInner">
-								<div class="animation text-center">
-									<img src="images/landing-page/find.png" />
+						<div class="col-md-3 col-xs-12 col-sm-6 searchMAIN">
+							<div class="{res.css.sInner}">
+								<div class="finMainwrapper">
+								    <div class="animation text-center">
+										<img src="images/landing-page/find.png" />
+									</div>
 								</div>
-								<g:Label styleName="h2 text-center" text="{i18n.GL0524}"/>
+								<tbp:H2Panel styleName="text-center" text="{i18n.GL0524}"/>
 								<div class="clearfix"/>
-								<g:Label styleName="p" text="{i18n.GL2122}"/>
+								<tbp:PPanel styleName="text-center" text="{i18n.GL2122}"/>
 
 								<!-- <tbp:TextBoxWithPlaceholder
 									styleName="form-control" placeholder="{i18n.GL2073}" ui:field="txtSearch"></tbp:TextBoxWithPlaceholder> -->
-								<tbp:AppSuggestBox ui:field="txtSearch" styleName="form-control" />
-								<g:Button styleName="primary" ui:field="btnSearch"
-									text="{i18n.GL0176}"></g:Button>
-
-							</div>
+								<tbp:PPanel styleName="text-center searchFind">
+									<tbp:AppSuggestBox ui:field="txtSearch" styleName="form-control" />
+									<g:Button styleName="primary {res.css.searchButton}" ui:field="btnSearch"
+									text="{i18n.GL0176}"></g:Button>	    
+								</tbp:PPanel>
+							
+								 </div>
 						</div>
-						<div class="col-xs-3">
-							<div class="sInner">
-								<div class="animation text-center">
-									<img src="images/landing-page/remix.png" />
+						<div class="col-md-3 col-xs-12 col-sm-6">
+							<div class="{res.css.sInner}">
+							    <div class="finMainwrapper">
+							     <div class="animation text-center">
+									<img src="images/landing-page/remix.png"/>
 								</div>
-								<g:Label styleName="h2 text-center" text="{i18n.GL2037}"></g:Label>
-								<div class="clearfix"></div>
-								<g:Label styleName="p" text="{i18n.GL2123}"/>
-								<g:Button styleName="primary {res.css.btnBlock}"
-									ui:field="btnMoreOnCollections" text="{i18n.GL1813}"></g:Button>
-
-							</div>
-						</div>
-						<div class="col-xs-3">
-							<div class="sInner">
-								<div class="animation text-center">
-									<img src="images/landing-page/share.png" />
 								</div>
-								<g:Label styleName="h2 text-center" text="{i18n.GL0526}"></g:Label>
+								<tbp:H2Panel styleName="text-center" text="{i18n.GL2037}"></tbp:H2Panel>
 								<div class="clearfix"></div>
-								<g:Label styleName="p" text="{i18n.GL2124}"/>
-								<g:Button styleName="primary {res.css.btnBlock}"
-									ui:field="btnMoreOnClasses" text="{i18n.GL2125}"></g:Button>
-
-							</div>
+								<tbp:PPanel  text="{i18n.GL2123}"/>
+								<tbp:PPanel>
+								    <g:Button styleName="primary {res.css.btnBlock}" ui:field="btnMoreOnCollections" text="{i18n.GL1813}"></g:Button>
+								</tbp:PPanel>
+						   </div>
 						</div>
-						<div class="col-xs-3">
-							<div class="sInner">
+						<div class="col-md-3 col-xs-12 col-sm-6">
+							<div class="{res.css.sInner}">
+							    <div class="finMainwrapper">
+							    	<div class="animation text-center">
+										<img src="images/landing-page/share.png" />
+									</div>
+								</div>	
+								<tbp:H2Panel styleName="text-center" text="{i18n.GL0526}"></tbp:H2Panel>
+								<div class="clearfix"></div>
+								<tbp:PPanel text="{i18n.GL2124}"/>
+								<tbp:PPanel>
+									<g:Button styleName="primary {res.css.btnBlock}" ui:field="btnMoreOnClasses" text="{i18n.GL2125}"></g:Button>    
+								</tbp:PPanel>
+								</div>
+						</div>
+						<div class="col-md-3 col-xs-12 col-sm-6">
+							<div class="{res.css.sInner}">
+								<div class="finMainwrapper">
 								<div class="animation text-center">
 									<img src="images/landing-page/monitor.png" />
 								</div>
-								<g:Label styleName="h2 text-center" text="{i18n.GL2126}"/>
+								</div>
+								<tbp:H2Panel styleName="text-center" text="{i18n.GL2126}"/>
 								<div class="clearfix"></div>
-								<g:Label styleName="p" text="{i18n.GL2127}"/>
-
-								<g:Button styleName="primary {res.css.btnBlock}" ui:field="viewSampleResportsBtn" text="{i18n.GL2128}"></g:Button>
-
+								<tbp:PPanel text="{i18n.GL2127}"/>
+								<tbp:PPanel>
+									<g:Button styleName="primary {res.css.btnBlock}" ui:field="viewSampleResportsBtn" text="{i18n.GL2128}"></g:Button>
+								</tbp:PPanel>	    
+								</div>
 							</div>
-						</div>
 					</div>
 				</div>
 			</section>
-			<div class="{res.css.learnMoreContainer}">
-				<g:Anchor styleName="{res.css.secondary}" ui:field="achLearn" text="{i18n.GL2129}"></g:Anchor>
-			</div>
-			<div class="clearfix"></div>
-			<div class="containerMain communityblock">
-			    <g:Label styleName="h2" text="{i18n.GL2130}"/>
-			    <g:Label styleName="h4" text="{i18n.GL2131}"/>
+			<g:HTMLPanel styleName="container">
+				<div class="{res.css.learnMoreContainer}">
+					<g:Anchor styleName="{res.css.secondary}" ui:field="achLearn" text="{i18n.GL2129}"></g:Anchor>
+				</div>
+			</g:HTMLPanel>
+						<div class="clearfix"></div>
+			<div class="container {res.css.communityblock}">
+			    <tbp:H2Panel  text="{i18n.GL2130}"/>
+			    <tbp:H4Panel  text="{i18n.GL2131}"/>
 				<p>
 					<g:HTMLPanel ui:field="contributorsContainer" />
 				</p>
 				<div class="clearfix"></div>
 			</div>
 			<section class="communityResult">
-				<div class="containerMain">
+				<div class="container hidden-xs hidden-sm">
 					<div class="col-xs-9">
 						<div class="InnerMenuBlock">
-							<div class="dataTableResultHeading">
-								<g:Label styleName="col-xs-3 menuHeader" text="{i18n.GL1000}"></g:Label>
-								<g:Label styleName="col-xs-3 menuHeader" text="{i18n.GL1001}"></g:Label>
-								<g:Label styleName="col-xs-3 menuHeader" text="{i18n.GL1002}"></g:Label>
-								<g:Label styleName="col-xs-3 menuHeader" text="{i18n.GL1003}"></g:Label>
+							<div class="{res.css.dataTableResultHeading}">
+								<g:Label styleName="col-xs-3 {res.css.menuHeader}" text="{i18n.GL1000}"></g:Label>
+								<g:Label styleName="col-xs-3 {res.css.menuHeader}" text="{i18n.GL1001}"></g:Label>
+								<g:Label styleName="col-xs-3 {res.css.menuHeader}" text="{i18n.GL1002}"></g:Label>
+								<g:Label styleName="col-xs-3 {res.css.menuHeader}" text="{i18n.GL1003}"></g:Label>
 					        </div>
 						</div>
-						<g:Label styleName="blueBand" text="{i18n.GL0166}"></g:Label>
-						<div class="dataTableResult">
+						<g:Label styleName="{res.css.blueBand}" text="{i18n.GL0166}"></g:Label>
+						<div class="{res.css.dataTableResult}">
 							<div class="col-xs-3">
 							    
 							    <div class="row">
@@ -382,8 +415,8 @@
 								</div>
 							</div>
 						</div>
-						<g:Label styleName="blueBand" text="{i18n.GL0167}" />
-						<div class="dataTableResult">
+						<g:Label styleName="{res.css.blueBand}" text="{i18n.GL0167}" />
+						<div class="{res.css.dataTableResult}">
 							<div class="col-xs-3">
 								<div class="row">
 									<div class="col-xs-8">
@@ -525,8 +558,8 @@
 								</div>
 							</div>
 						</div>
-						<g:Label styleName="blueBand" text="{i18n.GL0168}" />
-						<div class="dataTableResult">
+						<g:Label styleName="{res.css.blueBand}" text="{i18n.GL0168}" />
+						<div class="{res.css.dataTableResult}">
 							<div class="col-xs-3">
 								<div class="row">
 									<div class="col-xs-8">
@@ -851,99 +884,102 @@
 					</div>
 					<div class="col-xs-3">
 
-						<div class="rightBlock1">
-							<g:Label styleName="blockHeader" text="{i18n.GL2121}"></g:Label>
+						<div class="{res.css.rightBlock1}">
+							<g:Label styleName="{res.css.blockHeader}" text="{i18n.GL2121}"></g:Label>
 							<!-- List standard libraries... -->
-							<g:HTMLPanel styleName="blockContent" ui:field="panelStandardLibraries" />
+							<g:HTMLPanel styleName="{res.css.blockContent}" ui:field="panelStandardLibraries" />
 						</div>
-						<div class="rightBlock1">
-							<g:Label styleName="blockHeader" text="{i18n.GL0515}"/>
-							<g:HTMLPanel styleName="blockContent districtLibraryContainer" ui:field="panelDistrictLibraries"/>
+						<div class="{res.css.rightBlock1}">
+							<g:Label styleName="{res.css.blockHeader}" text="{i18n.GL0515}"/>
+							<g:HTMLPanel styleName="{res.css.blockContent} {res.css.districtLibraryContainer}" ui:field="panelDistrictLibraries"/>
 						</div>
-						<div class="rightBlock1">
-						    <g:Label styleName="blockHeader" text="{i18n.GL1550}"/>
-							<g:HTMLPanel styleName="blockContent last" ui:field="panelPartnerLibraries" />
+						<div class="{res.css.rightBlock1}">
+						    <g:Label styleName="{res.css.blockHeader}" text="{i18n.GL1550}"/>
+							<g:HTMLPanel styleName="{res.css.blockContent} {res.css.last}" ui:field="panelPartnerLibraries" />
 						</div>
 					</div>
 				</div>
 			</section>
-			<section class="getStart" id="getStarted">
-				<div class="containerMain">
-					<g:Label styleName="h2" text="{i18n.GL2132}"></g:Label>
-					<div class="col-xs-7">
-						<div class="getInner">
-						    <div class="getStartedIMG">
+			<section class="{res.css.getStart}" id="getStarted">
+				<div class="container">
+				  <div class="row">  
+					<div class="col-md-12">
+						<tbp:H2Panel text="{i18n.GL2132}"/>	    
+					</div>
+					<div class="col-md-7">
+						<div class="{res.css.getInner}">
+						    <div class="{res.css.getStartedIMG}">
 						      	<img src="images/landing-page/get-banner.png" class="img-responsive" />
-								<g:Label styleName="getCaption" text="{i18n.GL2133}"></g:Label>
+								<g:Label styleName="{res.css.getCaption}" text="{i18n.GL2133}"></g:Label>
 						    </div>
-							<div class="getContentContainer">
+							<div class="{res.css.getContentContainer}">
 								<h4>
 								    <g:Anchor href="http://support.goorulearning.org/hc/en-us/articles/200600838" target="_blank" text="{i18n.GL2134}"></g:Anchor>
 								</h4>
-								<g:Label styleName="p" text="{i18n.GL2136}"/>
+								<tbp:PPanel  text="{i18n.GL2136}"/>
 								<h4>
 								    <g:Anchor href="http://support.goorulearning.org/hc/en-us/articles/201853348" target="_blank" text="{i18n.GL2135}"></g:Anchor>
 								</h4>
-								<g:Label styleName="p" text="{i18n.GL2137}"/>
+								<tbp:PPanel  text="{i18n.GL2137}"/>
 								<h4>
 								    <g:Anchor href="http://www.goorulearning.org/#profilepage&amp;pageSize=5&amp;id=9aeb031a-4c43-4d4b-9b30-84261e39fdb2&amp;user=GooruTutorials&amp;pageNum=0&amp;pos=1" target="_blank" text="{i18n.GL2138}"></g:Anchor>
 								</h4>
-								<g:Label styleName="p" text="{i18n.GL2139}"/>
+								<tbp:PPanel  text="{i18n.GL2139}"/>
 							</div>
 						</div>
 					</div>
-					<div class="col-xs-5">
-						<div class="getInnerRight">
-							<g:Label styleName="h3 first" text="{i18n.GL2140}"/>
+					<div class="col-md-5">
+						<div class="{res.css.getInnerRight}">
+							<tbp:H3Panel styleName="first" text="{i18n.GL2140}"/>
 							<img src="images/landing-page/monitor-ico.png" />
-
 							<div class="clearfix"></div>
 							<h4>
 							     <g:Anchor href="http://www.eventbrite.com/e/gooru-office-hours-tickets-12378212567?aff=eorg" target="_blank" text="{i18n.GL2141}"></g:Anchor>
 							</h4>
-							<g:Label styleName="p" text="{i18n.GL2142}"/>
+							<tbp:PPanel styleName="p" text="{i18n.GL2142}"/>
 							<p>
 								<g:Anchor href="http://about.goorulearning.org/community/events"
 									text="{i18n.GL2143}" target="_blank"></g:Anchor>
 							</p>
 						</div>
-						<div class="getInnerRight">
-						    <g:Label styleName="h3" text="{i18n.GL2144}"/>
+						<div class="{res.css.getInnerRight}">
+						    <tbp:H3Panel  text="{i18n.GL2144}"/>
 							<h4>
 								<g:Anchor href="http://about.goorulearning.org/community/stories"
 									target="_blank" text="{i18n.GL2145}"/>
 							</h4>
-							<g:Label styleName="p" text="{i18n.GL2146}"/>
+							<tbp:PPanel text="{i18n.GL2146}"/>
 						</div>
 					</div>
 				</div>
+				</div>
 			</section>
-			<section class="mission">
-				<div class="containerMain">
-				    <g:Label styleName="h2" text="{i18n.GL2147}"/>
-					<div class="col-xs-4">
-						<div class="margin">
-						    <g:Label styleName="h2" text="{i18n.GL2148}"/>
-						    <g:Label styleName="p partext" text="{i18n.GL2149}"/>
+			<section class="{res.css.mission}">
+				<div class="container">
+				    <tbp:H2Panel  text="{i18n.GL2147}"/>
+					<div class="col-md-4">
+						<div class="{res.css.margin}">
+						    <tbp:H2Panel  text="{i18n.GL2148}"/>
+						    <tbp:PPanel styleName="{res.css.partext}" text="{i18n.GL2149}"/>
 							<p>
 								<g:Anchor styleName="btn btn-primary" href="http://partners.goorulearning.org/school/partner-with-us" target="_blank" text="{i18n.GL2150}"/>
 							</p>
 							<div class="clearfix"></div>
 						</div>
 					</div>
-					<div class="col-xs-4">
-						<div class="margin">
-						    <g:Label styleName="h2" text="{i18n.Gl2151}"/>
-							<g:Label styleName="p partext" text="{i18n.GL2152}"/>
+					<div class="col-md-4">
+						<div class="{res.css.margin}">
+						    <tbp:H2Panel text="{i18n.Gl2151}"/>
+							<tbp:PPanel styleName="{res.css.partext}" text="{i18n.GL2152}"/>
 							<p>
 								<g:Anchor styleName="btn btn-primary" href="http://partners.goorulearning.org/"  target="_blank" text="{i18n.GL2153}" />
 							</p>
 						</div>
 					</div>
-					<div class="col-xs-4">
-						<div class="margin">
-							<g:Label styleName="h2" text="{i18n.GL2154}"/>
-							<g:Label styleName="p partext" text="{i18n.GL2155}"/>
+					<div class="col-md-4">
+						<div class="{res.css.margin} {res.css.noMargin}">
+							<tbp:H2Panel  text="{i18n.GL2154}"/>
+							<tbp:PPanel styleName="{res.css.partext}" text="{i18n.GL2155}"/>
 							<p>
 								<g:Anchor styleName="btn btn-primary" href="http://developers.goorulearning.org/" target="_blank" text="{i18n.GL2156}" />
 							</p>
@@ -952,26 +988,26 @@
 
 				</div>
 			</section>
-			<section class="yourSupport">
-				<div class="containerMain">
-					<div class="">
-						<div class="col-xs-12">
+			<section class="{res.css.yourSupport}">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
 							<section>
-								<div class="col-xs-6">
-									<g:Label text="{i18n.GL2157}" styleName="h2"/>
-									<g:Label text="{i18n.GL2158}" styleName="p"/>
-									<g:Label text="{i18n.GL2159}" styleName="p"/>
+								<div class="col-md-6">
+									<tbp:H2Panel text="{i18n.GL2157}"/>
+									<tbp:PPanel text="{i18n.GL2158}"/>
+									<tbp:PPanel text="{i18n.GL2159}"/>
 								</div>
-								<div class="col-xs-6 goorubadge">
-									<div class="col-xs-6">
-										<div class="badgepadd">
-										    <g:Label text="{i18n.GL2160}" styleName="p"/>
+								<div class="col-md-6 {res.css.goorubadge}">
+									<div class="col-md-6 col-sm-6 text-center">
+										<div class="{res.css.badgepadd}">
+										    <tbp:PPanel text="{i18n.GL2160}"/>
 											<p>
 												<g:TextBox styleName="form-control" ui:field="txtEmbedLink" />
 											</p>
 										</div>
 									</div>
-									<div class="col-xs-6 text-right">
+									<div class="col-md-6 text-center">
 										<p>
 											<img class="img-responsive" src="images/landing-page/gooru-badge.png" />
 										</p>
@@ -985,10 +1021,10 @@
 			</section>
 			<div class="clearfix"></div>
 			<footer>
-				<div class="containerMain">
+				<div class="container">
 					<div class="row">
-						<div class="col-xs-2">
-							<g:Label text="{i18n.GL2161}" styleName="h4"/>
+						<div class="col-md-2 col-sm-2 col-xs-6">
+							<tbp:H4Panel text="{i18n.GL2161}"/>
 							<ul class="list-unstyled">
 								<li>
 									<g:Anchor href="http://about.goorulearning.org" target="_blank" text="{i18n.GL1024}"/>
@@ -1004,8 +1040,8 @@
 								</li>
 							</ul>
 						</div>
-						<div class="col-xs-2">
-							<g:Label text="{i18n.GL2162}" styleName="h4"/>
+						<div class="col-md-2 col-sm-2 col-xs-6">
+							<tbp:H4Panel text="{i18n.GL2162}"/>
 							<ul class="list-unstyled">
 								<li>
 									<g:Anchor href="http://about.goorulearning.org/product/oursolution" target="_blank" text="{i18n.GL2163}"/>
@@ -1020,7 +1056,7 @@
 
 							</ul>
 						</div>
-						<div class="col-xs-4 social text-center">
+						<div class="col-md-4 col-sm-4 social {res.css.social} text-center hidden-xs">
 
 							<ul class="list-unstyled list-inline">
 								<li>
@@ -1049,12 +1085,12 @@
 							<!-- <p>
 								<img src="images/landing-page/footer-icon.png" />
 							</p> -->
-							<div>
-								<g:Label styleName="copyRight" text="{i18n.GL1246}"></g:Label>
-							</div>
+						
+							<tbp:PPanel text="{i18n.GL1246}"/>
+						
 						</div>
-						<div class="col-xs-2">
-							<g:Label styleName="h4" text="{i18n.GL1243}" />
+						<div class="col-md-2 col-sm-2 col-xs-6">
+							<tbp:H4Panel text="{i18n.GL1243}" />
 							<ul class="list-unstyled">
 								<li>
 									<g:Anchor href="http://partners.goorulearning.org/school/partner-with-us" target="_blank" text="{i18n.GL2148}"/>
@@ -1071,8 +1107,8 @@
 
 							</ul>
 						</div>
-						<div class="col-xs-2 footerLastItem">
-							<g:Label styleName="h4" text="{i18n.GL2168}" />
+						<div class="col-md-2 col-sm-2 col-xs-6">
+							<tbp:H4Panel  text="{i18n.GL2168}" />
 							<ul class="list-unstyled">
 								<li>
 									<g:Anchor ui:field="achTerms" text="{i18n.GL0872}"/>
@@ -1089,15 +1125,48 @@
 							</ul>
 						</div>
 						<div class="clearfix"></div>
+						<div class="col-md-4 col-sm-4 col-xs-12 social {res.css.social} text-center visible-xs">
+							<ul class="list-unstyled list-inline">
+								<li>
+									<a href="https://www.facebook.com/gooru" target="_blank">
+										<img class="" src="images/landing-page/facebook-ico.png"></img>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.twitter.com/gooru" target="_blank">
+										<img class="" src="images/landing-page/twitter-ico.png"></img>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.youtube.com/gooru" target="_blank">
+										<img class="" src="images/landing-page/youtube-ico.png"></img>
+									</a>
+								</li>
+								<li>
+									<a href="https://plus.google.com/105874563188592272186/posts"
+										target="_blank">
+										<img class="" src="images/landing-page/google-plus-ico.png"></img>
+									</a>
+								</li>
+
+							</ul>
+        					<tbp:PPanel text="{i18n.GL1246}"/>
+      					</div>
+						<div class="clearfix"></div>
 					</div>
 				</div>
 			</footer>
 			<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-			<script
-				src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+			<script	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 			<!-- Include all compiled plugins (below), or include individual files 
 				as needed -->
-			<script src="js/bootstrap.min.js"></script>
-		</g:HTMLPanel>
-	</g:HTMLPanel>
+ 			<script src="js/bootstrap.min.js"></script>
+ 		</g:HTMLPanel>
+ 		</g:HTMLPanel>
+ 	
 </ui:UiBinder>
+
+
+
+
+

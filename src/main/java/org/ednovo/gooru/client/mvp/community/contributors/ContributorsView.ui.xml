@@ -4,7 +4,6 @@
 	<ui:style field="fc" src="featured.css" type="org.ednovo.gooru.client.mvp.community.contributors.ContributorsCBundle" />
 	<g:HTMLPanel ui:field="panelFeaturedContributors" styleName="{fc.panelFeaturedContributors}">
 	    <g:HTMLPanel ui:field="panelContributorsList" styleName="{fc.contriburotsListContainer}">
-	        
 	    </g:HTMLPanel>
 	    <g:Anchor ui:field="ancView" styleName="{fc.viewMore}"></g:Anchor>
 	</g:HTMLPanel>

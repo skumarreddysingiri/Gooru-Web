@@ -764,6 +764,7 @@
 	width: 235px;
 	padding: 5px;
 	text-align: left;
+	box-sizing:content-box;
 }
 
 .textBoxWithPlaceholderText {

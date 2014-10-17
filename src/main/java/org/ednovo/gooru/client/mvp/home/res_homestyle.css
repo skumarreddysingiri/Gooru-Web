@@ -1,0 +1,1225 @@
+header {
+	position: relative;
+}
+
+.banner {
+	margin-top: 0;
+}
+
+.bannerInner .caption {
+	left: 4%;
+	position: absolute;
+	right: 4%;
+	text-align: center;
+}
+
+.bannerInner .caption h2 {
+	font-size: 33px;
+	margin: 5px 0 0 0;
+}
+
+.bannerInner .caption p {
+	font-size: 17px;
+}
+
+ .bannerInner img {
+	height: 140px;
+	width: 100%;
+}
+ 
+.searchContainer .form-control {
+	height: 43px;
+}
+
+.searchContainer .sInner p {
+	font-size: 16px;
+}
+
+.searchContainer .col-md-3 h2 {
+	font-size: 35px;
+}
+
+.searchContainer .sInner p {
+	font-size: 14px;
+}
+
+.searchContainer .sInner {
+	min-height: 262px;
+}
+
+.getStart .getContentContainer h4{
+	  font-size:25px;
+  }
+  .getContentContainer p{
+	  font-size:17px;
+  }
+  .getStart .getInnerRight h3{
+	  font-size:32px;
+  }
+  .getStart .getInnerRight h4{
+	  font-size:22px;
+  }
+  .getInnerRight p{
+	  font-size:17px;
+  }
+  .getStartedIMG .getCaption{
+	  font-size:40px;
+  }
+  	.getStartedIMG img{
+		width:100%;
+	}
+  
+   .mission p,.yourSupport p{
+	  font-size:17px;
+  }
+	.margin{
+	  margin:15px 0;
+  }
+  .badgepadd{
+	display:block;
+	height:auto;
+	margin:25px 0;
+}
+ .social {
+	  text-align:left;
+  }
+ .logo{
+		text-align:left;
+	
+    padding-bottom: 6px;
+    padding-top: 6px;
+	width:16% !important;
+
+	}
+	.searchbox{
+		width:auto !important;
+	}
+	.navbar-form{
+		padding:0px 7px !important;
+	}
+	
+	.mainmenu{
+		width:auto !important;
+	}
+	.mainmenu{
+		position:absolute !important;
+		right:0;
+		top:0;
+		padding-left:0 !important;
+		padding-right:0 !important;
+	}
+	.mainmenu .navbar-default .navbar-nav > li > a {
+	color: #ffffff;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	font-size:12px;
+}
+.searchContainer .form-control{
+		height:43px;
+	}
+	.searchContainer .sInner p{
+		font-size:14px;
+	}
+	
+.searchContainer .sInner{
+		min-height:262px;
+	}
+	 .searchContainer .sInner p{
+	  font-size:16px;
+  }
+  
+  .searchContainer .col-md-3 h2{
+	  font-size:35px;
+  }
+  .tooltipContainer{
+  }
+  .menu{
+	padding:18px 8px;
+}
+.menu:hover{
+	padding:18px 8px;
+}
+.menuActive{
+	padding:18px 8px;
+}
+.menuActive:hover{
+	padding:18px 8px;
+}
+.login{}
+.loggedInfo{}
+.logoutPanel{}
+  .collectionToolTipLabel{}
+  .folderToolTipLabel{}
+  .rightArrow{}
+  .signup{}
+  .imgBox{}
+  .partext{}
+  .gooruBadge{}
+  .goorubadge{}
+  .badgepadd{}
+.noMargin{}
+.rightArrow{}
+.resourceRightsPopupContainer{}
+.landingPageHelpDottedBoxContainer {
+	
+}
+
+.classpageListContainer {
+	
+}
+
+.loginBtn {
+	
+}
+
+.howDoesItHeader {
+	
+}
+
+.landingSearchIcon {
+	
+}
+
+.loginCancelButton {
+	
+}
+
+.filterSectionTextbox {
+	
+}
+
+.loginCancelButton {
+	
+}
+
+.hewlett {
+	
+}
+
+.studyFeaturedCollectionButton {
+	
+}
+
+.okSuccessBtn {
+	
+}
+
+.passwordErrorLabel {
+	
+}
+
+.cancelBtn {
+	
+}
+
+.textBoxesField {
+	
+}
+
+.container-fluid {
+	
+}
+
+.forgotPwdSuccess {
+	
+}
+
+.summaryPopupContainer {
+	
+}
+
+.landingPageHelpOrganizeDownArrow {
+	
+}
+
+.searchInfoLinks {
+	
+}
+
+.discoverText {
+	
+}
+
+.customizeNumber {
+	
+}
+
+.landingPageHelpDiscoverSearchBoxContainer {
+	
+}
+
+.forgotPwdContentDiv {
+	
+}
+
+.ramShriram {
+	
+}
+
+.resetTimeoutHeader {
+	
+}
+
+.resetSuccessText {
+	
+}
+
+.okButtonmargin {
+	
+}
+
+.featuredRightContainer {
+	
+}
+
+.studyInfoButton {
+	
+}
+
+.landingPageHelpDiscoverSearchBox {
+	
+}
+
+.signUpButton {
+	
+}
+
+.discoverContent {
+	
+}
+
+.customizeTxt {
+	
+}
+
+.tryItOutGooru {
+	
+}
+
+.aboutInfoContainer {
+	
+}
+
+.searchInfoSubHeader {
+	
+}
+
+.logoutTextForLandingPageHelp {
+	
+}
+
+.landingPageHelpTeachLessoinHintActive {
+	
+}
+
+.plusImg {
+	
+}
+
+.resetPwdSuccessContainer {
+	
+}
+
+.forgotEmailIdLabel {
+	
+}
+
+.advanceSearchLink {
+	
+}
+
+.organizeTxt {
+	
+}
+
+.removingText {
+	
+}
+
+.htmlPanelClasspageList {
+	
+}
+
+.cisco {
+	
+}
+
+.navbar-collapse {
+	
+}
+
+.confirmMessageOk {
+	
+}
+
+.registerLink {
+	
+}
+
+.filterSubHeader {
+	
+}
+
+.okBlueBtn {
+	
+}
+
+.celebrations {
+	
+}
+
+.filterLeftSection {
+	
+}
+
+.landingPageHelpOrganizeBigIconHolder {
+	
+}
+
+.navbar-nav {
+	
+}
+
+.classicInnercontainer {
+	
+}
+
+.registerLinkQ {
+	
+}
+
+.searchInputBoxDiv {
+	
+}
+
+.actionFieldOne {
+	
+}
+
+.forgotEmailDiv {
+	
+}
+
+.askMoreQuestionForHelp {
+	
+}
+
+.nextGeneration {
+	
+}
+
+.confirmMessageDelete {
+	
+}
+
+.logoutText {
+	
+}
+
+.landingPageHelpOrganizeBigIconContainer {
+	
+}
+
+.plus {
+	
+}
+
+.searchSaveShare {
+	
+}
+
+.loginTop {
+	
+}
+
+.userMenuBottomLine {
+	
+}
+
+.filterSectionTypes {
+	
+}
+
+.filterSectionTypes {
+	
+}
+
+.resetPwdPanel {
+	
+}
+
+.landingHelpPopupTitle {
+	
+}
+
+.popupInner {
+	
+}
+
+.confirmMessage {
+	
+}
+
+.landingHelpPopupContainer {
+	
+}
+
+.landingPageHelpOrganizeLessionTotlatContainer {
+	
+}
+
+.classpageBottomLine {
+	
+}
+
+.searchInfoHeaderForSuppoters {
+	
+}
+
+.organizeImg {
+	
+}
+
+.featuredContentContainer {
+	
+}
+
+.featuredContentImageContainer {
+	
+}
+
+.description {
+	
+}
+
+.searchHeaderSubText {
+	
+}
+
+.newClasspageLink {
+	
+}
+
+.discoverImg {
+	
+}
+
+.organizeNumber {
+	
+}
+
+.innerContainer {
+	
+}
+
+.fadeblueButtonText {
+	
+}
+
+.linkTxt {
+	
+}
+
+.featuredWrapperContainer {
+	
+}
+
+.loadingText {
+	
+}
+
+.aboutInfoAlignCenter {
+	
+}
+
+.backToClassic {
+	
+}
+
+.landingPageDotsTitle {
+	
+}
+
+.resetPwdSuccessText {
+	
+}
+
+.headerPanel {
+	
+}
+
+.supporterHeader {
+	
+}
+
+.filterInnerContent {
+	
+}
+
+.leftImageContainer {
+	
+}
+
+.btn {
+	
+}
+
+.searchInfoLink {
+	
+}
+
+.loginGooruLabelSubText {
+	
+}
+
+.forgotEmailId {
+	
+}
+
+.landingPageHelpOrganizeBigIconTotalContainer {
+	
+}
+
+.classicGooru {
+	
+}
+
+.learnMoreContainer {
+	
+}
+
+.featuredRightContainerContent {
+	
+}
+
+.shadow {
+	
+}
+
+.gooruGuide {
+	
+}
+
+.featuredCollectionTitle {
+	
+}
+
+.featuredSlide1 {
+	
+}
+
+.howDoesItWork {
+	
+}
+
+.alpha {
+	
+}
+
+.landingDiscoverIcon {
+	
+}
+
+.landingPageLessionTitleSmall {
+	
+}
+
+.landingPageLessionTitle {
+	
+}
+
+.landingPageHelpTeachLessoinText {
+	
+}
+
+.register {
+	
+}
+
+.classpageTitleHeader {
+	
+}
+
+.studyFeaturedCollectionArrow {
+	
+}
+
+.filterContainer {
+	
+}
+
+.homeSearchHeader {
+	
+}
+
+.resetPwdTextError {
+	
+}
+
+.setAsCenterPopup {
+	
+}
+
+.aboutInfoInnerContent {
+	
+}
+
+.aboutInfoColumnDivider {
+	
+}
+
+.lblCollectionProgressDetails {
+	
+}
+
+.forgotPwdLink {
+	
+}
+
+.successText {
+	
+}
+
+.secondary {
+	
+}
+
+.landingPageHelpOrganizePlusIcon {
+	
+}
+
+.homeSearchInputBoxColor {
+	
+}
+
+.customizeContent {
+	
+}
+
+.landingPageCelebrationText {
+	
+}
+
+.aboutInfoColumnDividerLeft {
+	
+}
+
+.removePopupContainer {
+	
+}
+
+.featuredThemeContentContainer {
+	
+}
+
+.reportPopupHeader {
+	
+}
+
+.landingPageHelpTeachLessoinContainer {
+	
+}
+
+.homeInfoFeaturedContent {
+	
+}
+
+.pearson {
+	
+}
+
+.landingPageLearn {
+	
+}
+
+.homePageFeaturedStartStudy {
+	
+}
+
+.organizeContent {
+	
+}
+
+.filterSelectionBox {
+	
+}
+
+.gates {
+	
+}
+
+.resetPwdText {
+	
+}
+
+.searchInfoContainer {
+	
+}
+
+.featuredLeftContainer {
+	
+}
+
+.searchInfoHeader {
+	
+}
+
+.homeSearchInputBo.navbar-default {
+	
+}
+
+x {
+	
+}
+
+.searchInputBox {
+	
+}
+
+.classicContainer {
+	
+}
+
+.tryItOut {
+	
+}
+
+.navbar-default {
+	
+}
+
+.loginBlackText {
+	
+}
+
+.shareNumber {
+	
+}
+
+.featuredSlide {
+	
+}
+
+.textBoxPlaceHolderWidth {
+	
+}
+
+.successMsgText {
+	
+}
+
+.subheader {
+	
+}
+
+.goorulandingHeaderContainer {
+	
+}
+
+.noClasspageYet {
+	
+}
+
+.actionField {
+	
+}
+
+.htmlPanelContentContainer {
+	
+}
+
+.headerPopUpTitle {
+	
+}
+
+.featuredContainer {
+	
+}
+
+.loginHyplink {
+	
+}
+
+.loginPopupGlassStyle {
+	
+}
+
+.resetPwdLabel {
+	
+}
+
+.searchInfoLeftColumn {
+	
+}
+
+.homePageSearchButton {
+	
+}
+
+.landingPageDiscoverIconDetails {
+	
+}
+
+.searchInfoInnerContent {
+	
+}
+
+.landingPageHelpTeachLessoinNumberActive {
+	
+}
+
+.landingDiscoverIconContainer {
+	
+}
+
+.landingPageHelpDotsTotalContainer {
+	
+}
+
+.discoverNumber {
+	
+}
+
+.searchInfoColumnDivider {
+	
+}
+
+.helpPagePosition {
+	
+}
+
+.landingPageHelpTeachLessoinTextActive {
+	
+}
+
+.closeButton {
+	
+}
+
+.classictryItOut {
+	
+}
+
+.popUpTitleContext {
+	
+}
+
+.lblCollectionProgress {
+	
+}
+
+.featuredBaseContainer1 {
+	
+}
+
+.resetPwdContentDiv {
+	
+}
+
+.loginGooruLogoContainer {
+	
+}
+
+.shareImg {
+	
+}
+
+.filterHeader {
+	
+}
+
+.filterArrow {
+	
+}
+
+.btnBlock {
+	
+}
+
+.featuredLeftContainerContent {
+	
+}
+
+.landingPageHelpOrganizeBigIconContainerTwo {
+	
+}
+
+.featuredThemeContent {
+	
+}
+
+.searchBarMainContainer {
+	
+}
+
+.forgotPwdFormButtonDiv {
+	
+}
+
+.customizeImg {
+	
+}
+
+.mailSupport {
+	
+}
+
+.landingPageHelpTeachLessoinNumber {
+	
+}
+
+.searchInfoIcon {
+	
+}
+
+.landingPagesliderArrow {
+	
+}
+
+.landingPageSliderArrowBackground {
+	
+}
+
+.resetFooterText {
+	
+}
+
+.searchInfoSubContent {
+	
+}
+
+.landingPageHelpDotsContainer {
+	
+}
+
+.removeText {
+	
+}
+
+.forgotPwdFormCancelButton {
+	
+}
+
+.resetTimeoutText {
+	
+}
+
+.onr {
+	
+}
+
+.confirmMessageContainer {
+	
+}
+
+.sce {
+	
+}
+
+.discoverTxt {
+	
+}
+
+.tryItoutContainer {
+	
+}
+
+.fadeblueArrow {
+	
+}
+
+.logPanel {
+	
+}
+
+.landingPageHelpOrganizeTopArrow {
+	
+}
+
+.blueButtonText {
+	
+}
+
+.ourMissionImage {
+	
+}
+
+.gwtSuggestBoxPopup {
+	
+}
+
+.closePopUp {
+	
+}
+
+.loginGooruLabel {
+	
+}
+
+.imageFieldContainer {
+	
+}
+
+.classpageListTitle {
+	
+}
+
+.landingPageHelpOrganizeImageContainer {
+	
+}
+
+.landingPageSliderArrowSpan {
+	
+}
+
+.shareTxt {
+	
+}
+
+.landingPageHelpDotsText {
+	
+}
+
+.searchImageIcon {
+	
+}
+
+.searchBarBanner {
+	
+}
+
+.supporters {
+	
+}
+
+.summaryText {
+	
+}
+
+.fenwick {
+	
+}
+
+.landingPageOuterDiv {
+	
+}
+
+.successPopupContainer {
+	
+}
+
+.forgotPwdFormContainer {
+	
+}
+
+.filterSuggestBox {
+	
+}
+
+.landingPageHelpTeachLessoinHint {
+	
+}
+
+.confirmMessages {
+	
+}
+
+.landingSearchIconCont {
+	
+}
+
+.gooruLearningIcon {
+	
+}
+
+.waitPopupContainer {
+	
+}
+
+.filterLabel {
+	
+}
+
+.ladningPageHelpSearchButton {
+	
+}
+
+.resetPwdTextContainer {
+	
+}
+
+.landingPageCelebration {
+	
+}
+
+.header {
+	
+}
+
+.loginCkbox {
+	
+}
+
+.blueArrow {
+	
+}
+
+.htmlPanelNoClasspageContainer {
+	
+}
+
+.shareContent {
+	
+}
+
+.small {
+	
+}
+
+.filterSection {
+	
+}
+
+.google {
+	
+}
+
+.playerAddToolTipGlassStyle {
+	
+}
+
+.featuredBaseContainer {
+	
+}
+
+.homeSearchInputBox {
+	
+}
+
+.loginBorderPanel {
+	
+}
+
+.setMarketingPopUpCenter {
+	
+}
+
+.rightImageContainer {
+	
+}
+ .communityblock{}
+ .getInner{}
+ .dropdowDisplay{}
+ .districDropDown{}
+ .partnersDropdown{}
+ .logoutDownArrow{}
+ .searchButton{}
+ .menuHeader{}
+ .blueBand{}
+ .dataTableResult{}
+ .rightBlock1{}
+ .blockContent{}
+ .districtLibraryContainer{}
+ .blockHeader{}
+ .last{}
+ .dataTableResultHeading{}
